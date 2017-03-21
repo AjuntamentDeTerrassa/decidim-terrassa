@@ -26,7 +26,6 @@ cache:
     - vendor/bundle
 script:
   - bundle exec rake
-  - bundle exec rspec
 
 rvm:
   - 2.4.0
