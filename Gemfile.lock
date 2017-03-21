@@ -227,6 +227,7 @@ GEM
       safe_yaml (~> 1.0.0)
     css_parser (1.4.10)
       addressable
+    dalli (2.7.6)
     database_cleaner (1.5.3)
     date_validator (0.9.0)
       activemodel
@@ -368,6 +369,7 @@ GEM
     multi_json (1.12.1)
     multi_xml (0.6.0)
     multipart-post (2.0.0)
+    newrelic_rpm (3.18.1.330)
     nio4r (2.0.0)
     nokogiri (1.7.0.1)
       mini_portile2 (~> 2.1.0)
@@ -502,6 +504,7 @@ GEM
       unicode-display_width (~> 1.0, >= 1.0.1)
     ruby-progressbar (1.8.1)
     ruby_dep (1.5.0)
+    ruby_http_client (3.0.1)
     safe_yaml (1.0.4)
     sass (3.4.23)
     sassc (1.11.2)
@@ -516,6 +519,8 @@ GEM
       sprockets-rails
       tilt
     searchlight (4.1.0)
+    sendgrid-ruby (4.0.7)
+      ruby_http_client (~> 3.0.1)
     simplecov (0.14.1)
       docile (~> 1.1.0)
       json (>= 1.8, < 3)
@@ -586,15 +591,18 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
+  dalli
   database_cleaner
   decidim!
   decidim-dev!
   faker (~> 1.7.3)
   fog-aws
   listen (~> 3.1.0)
+  newrelic_rpm
   puma (~> 3.0)
   rails_12factor
   rspec-rails
+  sendgrid-ruby
   spring
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data
