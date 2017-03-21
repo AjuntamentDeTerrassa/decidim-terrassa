@@ -23,6 +23,11 @@ end
 group :production do
   gem "rails_12factor"
   gem "fog-aws"
+  gem 'dalli'
+  gem 'sendgrid-ruby'
+  gem 'newrelic_rpm'
+  gem "lograge"
+  gem "sentry-raven"
 end
 
 group :test do
