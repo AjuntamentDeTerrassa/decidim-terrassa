@@ -16,8 +16,8 @@ if Rails.application.secrets.aws_access_key_id.present?
     config.fog_provider = 'fog/aws'                                             # required
     config.fog_credentials = {
       provider:              'AWS',                                             # required
-      aws_access_key_id:     Rails.configuration.secrets.aws_access_key_id,     # required
-      aws_secret_access_key: Rails.configuration.secrets.aws_secret_access_key, # required
+      aws_access_key_id:     Rails.application.secrets.aws_access_key_id,     # required
+      aws_secret_access_key: Rails.application.secrets.aws_secret_access_key, # required
       region:                'eu-west-1',                                       # optional, defaults to 'us-east-1'
       host:                  's3-eu-west-1.amazonaws.com',                                  # optional, defaults to nil
     }
