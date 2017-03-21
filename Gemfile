@@ -26,6 +26,7 @@ group :production do
   gem 'dalli'
   gem 'sendgrid-ruby'
   gem 'newrelic_rpm'
+  gem "lograge"
 end
 
 group :test do
