@@ -94,7 +94,6 @@ Rails.application.configure do
       }.to_json
     }
   end
-          
 
   # Use a different logger for distributed setups.
   # require 'syslog/logger'
