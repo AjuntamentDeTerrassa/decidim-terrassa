@@ -20,4 +20,9 @@ Decidim.configure do |config|
 
   # The number of reports which an object can receive before hiding it
   # config.max_reports_before_hiding = 3
+
+  if ENV["HEROKU_APP_NAME"].present?
+    config.base_uploads_path = ENV["HEROKU_APP_NAME"] + "/"
+  end
 end
+
