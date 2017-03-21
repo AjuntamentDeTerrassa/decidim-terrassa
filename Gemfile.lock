@@ -586,6 +586,7 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
+  database_cleaner
   decidim!
   decidim-dev!
   faker (~> 1.7.3)
@@ -593,6 +594,7 @@ DEPENDENCIES
   listen (~> 3.1.0)
   puma (~> 3.0)
   rails_12factor
+  rspec-rails
   spring
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data
