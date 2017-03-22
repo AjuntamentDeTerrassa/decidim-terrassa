@@ -7,6 +7,7 @@ gem "decidim", git: 'https://github.com/AjuntamentdeBarcelona/decidim.git'
 gem 'puma', '~> 3.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'faker', '~> 1.7.3'
+gem "passenger"
 
 group :development, :test do
   gem 'byebug', platform: :mri
@@ -28,6 +29,7 @@ group :production do
   gem 'newrelic_rpm'
   gem "lograge"
   gem "sentry-raven"
+  gem "sidekiq"
 end
 
 group :test do
