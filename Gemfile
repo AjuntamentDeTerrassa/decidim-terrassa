@@ -28,6 +28,7 @@ group :production do
   gem 'newrelic_rpm'
   gem "lograge"
   gem "sentry-raven"
+  gem "sidekiq"
 end
 
 group :test do
