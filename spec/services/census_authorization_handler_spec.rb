@@ -9,19 +9,12 @@ describe CensusAuthorizationHandler do
   let(:document_number) { "12345678A" }
   let(:document_type) { :nie }
   let(:date_of_birth) { Date.civil(1987, 9, 17) }
-  let(:scope_id) { 123 }
-  let(:scope) { double(name: "Ciutat Vella") }
   let(:params) do
     {
       document_number: document_number,
       document_type: document_type,
-      scope_id: scope_id,
       date_of_birth: date_of_birth
     }
-  end
-
-  before do
-    allow(Decidim::Scope).to receive(:find).and_return(scope)
   end
 
   it_behaves_like "an authorization handler"
@@ -146,12 +139,6 @@ describe CensusAuthorizationHandler do
       end
 
       it { is_expected.to_not be_valid }
-    end
-  end
-
-  describe "metadata" do
-    it "includes the scope" do
-      expect(subject.metadata).to include(scope: "Ciutat Vella")
     end
   end
 end

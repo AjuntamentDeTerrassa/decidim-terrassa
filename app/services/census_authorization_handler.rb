@@ -9,13 +9,11 @@ class CensusAuthorizationHandler < Decidim::AuthorizationHandler
 
   attribute :document_number, String
   attribute :document_type, Symbol
-  attribute :scope_id, Integer
   attribute :date_of_birth, Date
 
   validates :date_of_birth, presence: true
   validates :document_type, inclusion: { in: %i(dni nie passport community_dni) }, presence: true
   validates :document_number, format: { with: /\A[A-z0-9]*\z/ }, presence: true
-  validates :scope_id, presence: true
 
   validate :document_type_valid
   validate :over_16
@@ -36,14 +34,6 @@ class CensusAuthorizationHandler < Decidim::AuthorizationHandler
     end
 
     instance
-  end
-
-  def metadata
-    super.merge(scope: scope.name)
-  end
-
-  def scope
-    Decidim::Scope.find(scope_id)
   end
 
   def census_document_types
