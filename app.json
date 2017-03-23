@@ -17,6 +17,15 @@
     "AWS_SECRET_ACCESS_KEY": {
       "required": true
     },
+    "CENSUS_PASSWORD": {
+      "required": true
+    },
+    "CENSUS_URL": {
+      "required": true
+    },
+    "CENSUS_USERNAME": {
+      "required": true
+    },
     "HERE_APP_ID": {
       "required": false
     },
@@ -26,7 +35,6 @@
     "HEROKU_APP_NAME": {
       "required": true
     },
-
     "SECRET_KEY_BASE": {
       "description": "A secret used by Rails to identify sessions",
       "generator": "secret"
