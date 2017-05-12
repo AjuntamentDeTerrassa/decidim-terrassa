@@ -2,7 +2,7 @@
 # frozen_string_literal: true
 Decidim.configure do |config|
   config.application_name = "Decidim Terrassa"
-  config.mailer_sender    = "Decidim Terrassa <decidim@terrassa.cat>"
+  config.mailer_sender    = "Decidim Terrassa <no-respondre@participa.terrassa.cat>"
   config.authorization_handlers = [CensusAuthorizationHandler]
 
   # Uncomment this lines to set your preferred locales
