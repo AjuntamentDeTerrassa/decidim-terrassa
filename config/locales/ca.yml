@@ -32,3 +32,14 @@ ca:
         nie: NIE
         passport: Passaport
         community_dni: DNI comunitari
+    meetings:
+      meetings:
+        filters:
+          scopes: Barri
+    participatory_processes:
+      scopes:
+        global: Tota la ciutat
+    proposals:
+      proposals:
+        filters:
+          scopes: Barri
