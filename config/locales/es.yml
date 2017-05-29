@@ -32,3 +32,14 @@ es:
         nie: NIE
         passport: Pasaporte
         community_dni: DNI comunitario
+    meetings:
+      meetings:
+        filters:
+          scopes: Barrio
+    participatory_processes:
+      scopes:
+        global: Toda la ciudad
+    proposals:
+      proposals:
+        filters:
+          scopes: Barrio
