@@ -19,7 +19,8 @@ Decidim.configure do |config|
 
   # Custom calculate reference method
   config.resource_reference_generator = lambda do |resource, feature|
-    resource.id
+    class_identifier = resource.class.name.demodulize[0..3].upcase
+    "#{class_identifier}-#{resource.id}"
   end
 
   # Currency unit
