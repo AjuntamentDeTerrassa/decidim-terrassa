@@ -17,6 +17,12 @@ Decidim.configure do |config|
     here_app_code: Rails.application.secrets.geocoder[:here_app_code]
   }
 
+  # Custom calculate reference method
+  config.resource_reference_generator = lambda do |resource, feature|
+    class_identifier = resource.class.name.demodulize[0..3].upcase
+    "#{class_identifier}-#{resource.id}"
+  end
+
   # Currency unit
   config.currency_unit = "€"
 
