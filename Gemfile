@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 ruby '2.4.1'
 
-gem "decidim", "0.6.1"
+gem "decidim", "0.6.2"
 
 gem 'puma'
 gem 'uglifier'
@@ -11,7 +11,7 @@ gem "passenger"
 
 group :development, :test do
   gem 'byebug', platform: :mri
-  gem "decidim-dev", "0.6.1"
+  gem "decidim-dev", "0.6.2"
 end
 
 group :development do
