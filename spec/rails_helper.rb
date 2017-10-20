@@ -5,6 +5,10 @@ require File.expand_path('../../config/environment', __FILE__)
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'spec_helper'
 require 'rspec/rails'
+
+Decidim::Dev.dummy_app_path = File.expand_path(File.join(__dir__, ".."))
+require "decidim/dev/test/base_spec_helper"
+
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
@@ -60,5 +64,15 @@ RSpec.configure do |config|
 
   config.after(:suite) do
     DatabaseCleaner.clean
+  end
+
+  config.order = :random
+
+  config.before(:each) do
+    I18n.available_locales = [:en, :ca]
+    I18n.default_locale = :en
+    I18n.locale = :en
+    Decidim.available_locales = [:en, :ca]
+    Decidim.default_locale = :en
   end
 end
