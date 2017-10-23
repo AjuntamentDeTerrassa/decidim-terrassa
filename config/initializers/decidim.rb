@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 # frozen_string_literal: true
-require "decidim/terrassa"
 
 Decidim.configure do |config|
   config.application_name = "Participa a Terrassa"
