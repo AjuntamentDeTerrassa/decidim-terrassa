@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 ruby '2.4.2'
 
-gem "decidim", "~> 0.6.8"
+gem "decidim", "~> 0.7.1"
 gem "virtus-multiparams"
 
 gem 'puma'
