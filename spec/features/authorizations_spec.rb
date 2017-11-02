@@ -20,7 +20,6 @@ describe "Authorizations", type: :feature, perform_enqueued: true do
   end
 
   before do
-    Decidim.authorization_handlers = [CensusAuthorizationHandler]
     allow_any_instance_of(CensusAuthorizationHandler).to receive(:response).and_return(response)
     switch_to_host(organization.host)
   end
@@ -38,17 +37,6 @@ describe "Authorizations", type: :feature, perform_enqueued: true do
           fill_in :user_password, with: "password1234"
           find("*[type=submit]").click
         end
-      end
-
-      it "redirects the user to the homepage after the first sign in" do
-        visit decidim.authorizations_path
-        find("a", text: "El padró").trigger("click")
-
-        fill_in_authorization_form
-        click_button "Send"
-
-        expect(page).to have_content("successfully")
-        expect(current_path).to eq decidim.root_path
       end
     end
   end
