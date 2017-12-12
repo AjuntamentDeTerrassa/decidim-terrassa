@@ -13,6 +13,9 @@ branches:
 before_script:
   - bundle exec rake db:create db:schema:load
 
+before_install:
+  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
+
 env:
   - RAILS_ENV=test
 
@@ -34,3 +37,4 @@ notifications:
 
 addons:
   postgresql: "9.4"
+  chrome: stable
