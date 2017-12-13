@@ -2,9 +2,17 @@
 
 require "rails_helper"
 
-describe "Authorizations", type: :feature, perform_enqueued: true do
-  let(:organization) { create :organization, available_authorizations: authorizations }
-  let(:authorizations) { ["CensusAuthorizationHandler"] }
+describe "Authorizations", type: :feature, perform_enqueued: true, with_authorization_workflows: ["census_authorization_handler"] do
+  let(:organization) do
+    create(
+      :organization,
+      name: "Ajuntament",
+      default_locale: :ca,
+      available_locales: [:es, :ca],
+      available_authorizations: authorizations
+    )
+  end
+  let(:authorizations) { ["census_authorization_handler"] }
 
   let(:response) do
     Nokogiri::XML("<existeix>true</existeix>").remove_namespaces!
@@ -15,7 +23,7 @@ describe "Authorizations", type: :feature, perform_enqueued: true do
     select "DNI", from: "authorization_handler_document_type"
     fill_in "authorization_handler_document_number", with: "12345678A"
     select "12", from: "authorization_handler_date_of_birth_3i"
-    select "January", from: "authorization_handler_date_of_birth_2i"
+    select "Gener", from: "authorization_handler_date_of_birth_2i"
     select "1979", from: "authorization_handler_date_of_birth_1i"
   end
 
@@ -50,14 +58,19 @@ describe "Authorizations", type: :feature, perform_enqueued: true do
     end
 
     it "allows the user to authorize against available authorizations" do
-      visit decidim.new_authorization_path(handler: "census_authorization_handler")
+      within_user_menu do
+        click_link "El meu compte"
+      end
+
+      click_link "Autoritzacions"
+      click_link "El padró"
 
       fill_in_authorization_form
-      click_button "Send"
+      click_button "Enviar"
 
-      expect(page).to have_content("successfully")
+      expect(page).to have_content("amb èxit")
 
-      visit decidim.authorizations_path
+      visit decidim_verifications.authorizations_path
 
       within ".authorizations-list" do
         expect(page).to have_content("El padró")
@@ -73,12 +86,12 @@ describe "Authorizations", type: :feature, perform_enqueued: true do
       end
 
       it "shows the authorization at their account" do
-        visit decidim.authorizations_path
+        visit decidim_verifications.authorizations_path
 
         within ".authorizations-list" do
           expect(page).to have_content("El padró")
           expect(page).not_to have_link("El padró")
-          expect(page).to have_content(I18n.localize(authorization.created_at, format: :long))
+          expect(page).to have_content(I18n.localize(authorization.granted_at, format: :long, locale: :ca))
         end
       end
     end

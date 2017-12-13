@@ -20,4 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  decidim:
+    authorization_handlers:
+      census_authorization_handler:
+        explanation: Get verified with the census
