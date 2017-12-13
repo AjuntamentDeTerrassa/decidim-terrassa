@@ -23,7 +23,7 @@ jobs:
             - bundler-dependencies-{{ checksum "Gemfile.lock" }}
       - run:
           name: Install ruby dependencies
-          command: bundle install
+          command: bundle install --jobs=4 --retry=3
       - save_cache:
           key: bundler-dependencies-{{ checksum "Gemfile.lock" }}
           paths:
@@ -34,17 +34,6 @@ jobs:
       - run:
           name: Generate test app
           command: bundle exec rake decidim:generate_external_test_app
-      - restore_cache:
-         keys:
-           - assets-{{ .Branch }}
-           - assets-master
-      - run:
-          name: Precompile test app assets
-          command: cd spec/decidim_dummy_app && bundle exec rails assets:precompile
-      - save_cache:
-          key: assets-{{ .Branch }}
-          paths:
-            - spec/decidim_dummy_app/public/assets
       - run:
           name: Run tests
           command: bundle exec rake
