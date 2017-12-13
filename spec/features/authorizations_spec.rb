@@ -50,7 +50,7 @@ describe "Authorizations", type: :feature, perform_enqueued: true do
     end
 
     it "allows the user to authorize against available authorizations" do
-      visit decidim.new_authorization_path(handler: "census_authorization_handler")
+      visit decidim_verifications.new_authorization_path(handler: "census_authorization_handler")
 
       fill_in_authorization_form
       click_button "Send"
