@@ -41,7 +41,7 @@ jobs:
           name: Run tests
           command: bundle exec rake
       - store_artifacts:
-          path: /app/spec/decidim_dummy_app/tmp/capybara
+          path: /app/tmp/capybara
 
 workflows:
   version: 2
