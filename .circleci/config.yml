@@ -1,0 +1,58 @@
+version: 2
+
+defaults: &defaults
+  docker:
+    - image: decidim/decidim:latest-dev
+      environment:
+        BUNDLE_GEMFILE: /app/Gemfile
+        SIMPLECOV: true
+        DATABASE_USERNAME: postgres
+        FAIL_FAST: true
+    - image: postgres
+      environment:
+        POSTGRES_USER: postgres
+  working_directory: /app
+
+jobs:
+  tests:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - bundler-dependencies-{{ checksum "Gemfile.lock" }}
+      - run:
+          name: Install ruby dependencies
+          command: bundle install
+      - save_cache:
+          key: bundler-dependencies-{{ checksum "Gemfile.lock" }}
+          paths:
+            - /usr/local/bundle/
+      - run:
+          name: Wait for db
+          command: dockerize -wait tcp://localhost:5432 -timeout 1m
+      - run:
+          name: Generate test app
+          command: bundle exec rake decidim:generate_external_test_app
+      - restore_cache:
+         keys:
+           - assets-{{ .Branch }}
+           - assets-master
+      - run:
+          name: Precompile test app assets
+          command: cd spec/decidim_dummy_app && bundle exec rails assets:precompile
+      - save_cache:
+          key: assets-{{ .Branch }}
+          paths:
+            - spec/decidim_dummy_app/public/assets
+      - run:
+          name: Run tests
+          command: bundle exec rake
+      - store_artifacts:
+          path: /app/spec/decidim_dummy_app/tmp/capybara
+
+workflows:
+  version: 2
+  test:
+    jobs:
+      - tests
