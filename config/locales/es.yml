@@ -20,6 +20,7 @@ es:
     authorization_handlers:
       census_authorization_handler:
         name: El padrón
+        explanation: Verifícate con el padrón
         fields:
           document_number: Número de documento
           document_type: Tipo de documento

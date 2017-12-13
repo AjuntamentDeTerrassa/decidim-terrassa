@@ -4,10 +4,9 @@
 Decidim.configure do |config|
   config.application_name = "Participa a Terrassa"
   config.mailer_sender    = "Participa a Terrassa <no-respondre@participa.terrassa.cat>"
-  config.authorization_handlers = ["CensusAuthorizationHandler"]
 
   # Uncomment this lines to set your preferred locales
-  config.available_locales = %i{ca es}
+  config.available_locales = %w{ca es}
   config.default_locale = :ca
 
   # Geocoder configuration
@@ -34,3 +33,6 @@ Decidim.configure do |config|
   end
 end
 
+Decidim::Verifications.register_workflow(:census_authorization_handler) do |auth|
+  auth.form = "CensusAuthorizationHandler"
+end
