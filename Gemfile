@@ -20,6 +20,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen'
   gem 'spring-commands-rspec'
+  gem 'launchy'
 end
 
 group :production do

@@ -49,6 +49,7 @@ describe "Authorizations", type: :system, perform_enqueued: true, with_authoriza
       click_link "El padró"
 
       fill_in_authorization_form
+
       click_button "Enviar"
 
       expect(page).to have_content("amb èxit")
