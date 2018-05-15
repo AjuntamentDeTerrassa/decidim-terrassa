@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 ruby '2.5.0'
 
-gem "decidim", "~> 0.10.0"
+gem "decidim", "~> 0.11.1"
 gem "virtus-multiparams"
 
 gem 'puma'
@@ -20,6 +20,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen'
   gem 'spring-commands-rspec'
+  gem 'launchy'
 end
 
 group :production do

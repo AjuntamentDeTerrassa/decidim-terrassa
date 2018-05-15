@@ -2,7 +2,7 @@ version: 2
 
 defaults: &defaults
   docker:
-    - image: decidim/decidim:0.9-test
+    - image: decidim/decidim@sha256:2643b48944b2a2aedfb84ef6e48c1beec285c167319923422522bfa6df53d287
       environment:
         BUNDLE_GEMFILE: /app/Gemfile
         SIMPLECOV: true
@@ -34,6 +34,9 @@ jobs:
       - run:
           name: Create test DB
           command: RAILS_ENV=test bundle exec rails db:create db:schema:load
+      - run:
+          name: Precompile assets
+          command: RAILS_ENV=test bundle exec rake assets:precompile
       - run:
           name: Run tests
           command: bundle exec rake
