@@ -16,8 +16,9 @@ describe CensusAuthorizationHandler do
       date_of_birth: date_of_birth
     }
   end
-
-  it_behaves_like "an authorization handler"
+  let(:xml) do
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Envelope>\n<Body>\n<existeixAmbDistricteResponse>\n<return>\n<districte>4</districte>\n<existeix>true</existeix>\n<missatgeError/>\n<resposta>0</resposta>\n</return>\n</existeixAmbDistricteResponse>\n</Body>\n</Envelope>\n"
+  end
 
   before do
     handler.user = create(:user)
@@ -27,8 +28,10 @@ describe CensusAuthorizationHandler do
     before do
       allow(handler)
         .to receive(:response)
-        .and_return(Nokogiri::XML("<existeix>true</existeix>").remove_namespaces!)
+        .and_return(Nokogiri::XML(xml).remove_namespaces!)
     end
+
+    it_behaves_like "an authorization handler"
 
     describe "document_number" do
       context "when it isn't present" do
@@ -87,6 +90,12 @@ describe CensusAuthorizationHandler do
           expect(subject.date_of_birth.month).to eq(8)
           expect(subject.date_of_birth.day).to eq(16)
         end
+      end
+    end
+
+    describe "district" do
+      it "parses it from the response" do
+        expect(subject.metadata).to eq(district: "4")
       end
     end
 

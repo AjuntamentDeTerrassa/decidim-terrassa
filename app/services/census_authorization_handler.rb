@@ -31,7 +31,15 @@ class CensusAuthorizationHandler < Decidim::AuthorizationHandler
     )
   end
 
+  def metadata
+    super.merge(district: district) if district.present?
+  end
+
   private
+
+  def district
+    response.xpath("//districte").text.to_s
+  end
 
   def sanitized_document_type
     case document_type&.to_sym
@@ -77,13 +85,13 @@ class CensusAuthorizationHandler < Decidim::AuthorizationHandler
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:pad="http://padro.serveis.terrassa.cat/">
   <soapenv:Header/>
   <soapenv:Body>
-    <pad:existeix>
+    <pad:existeixAmbDistricte>
     <tipusDocument>#{sanitized_document_type}</tipusDocument>
       <numDocument>#{sanitize document_number&.upcase}</numDocument>
       <dataNaixement>#{sanitized_date_of_birth}</dataNaixement>
       <usuari>#{census_username}</usuari>
       <clau>#{census_password}</clau>
-    </pad:existeix>
+    </pad:existeixAmbDistricte>
   </soapenv:Body>
 </soapenv:Envelope>
 EOS
