@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 ruby '2.5.0'
 
-DECIDIM_VERSION = "~> 0.12.1"
+DECIDIM_VERSION = "~> 0.13.0"
 
 gem "decidim", DECIDIM_VERSION
 gem "virtus-multiparams"
