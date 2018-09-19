@@ -2,9 +2,11 @@ source "https://rubygems.org"
 
 ruby '2.5.0'
 
-DECIDIM_VERSION = "~> 0.13.1"
+DECIDIM_VERSION = "~> 0.14.1"
 
 gem "decidim", DECIDIM_VERSION
+gem "decidim-initiatives", DECIDIM_VERSION
+gem "decidim-file_authorization_handler", git: "https://github.com/CodiTramuntana/decidim-file_authorization_handler.git", branch: "fix/ensure_all_data_properly_encoded"
 gem "virtus-multiparams"
 
 gem 'puma'
