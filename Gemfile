@@ -12,7 +12,6 @@ gem "virtus-multiparams"
 gem 'puma'
 gem 'uglifier'
 gem 'faker'
-gem "passenger"
 
 group :development, :test do
   gem 'byebug', platform: :mri
