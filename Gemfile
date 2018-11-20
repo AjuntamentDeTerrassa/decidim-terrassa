@@ -1,8 +1,8 @@
 source "https://rubygems.org"
 
-ruby '2.5.0'
+ruby '2.5.3'
 
-DECIDIM_VERSION = "~> 0.13.1"
+DECIDIM_VERSION = "~> 0.15.0"
 
 gem "decidim", DECIDIM_VERSION
 gem "virtus-multiparams"
@@ -10,7 +10,6 @@ gem "virtus-multiparams"
 gem 'puma'
 gem 'uglifier'
 gem 'faker'
-gem "passenger"
 
 group :development, :test do
   gem 'byebug', platform: :mri
