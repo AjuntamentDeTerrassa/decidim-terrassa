@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 ruby '2.5.3'
 
-DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "0.15-stable" }
+DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "0.16-stable" }
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-initiatives", DECIDIM_VERSION
