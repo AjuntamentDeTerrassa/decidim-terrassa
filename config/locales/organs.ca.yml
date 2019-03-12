@@ -2,164 +2,164 @@ ca:
   activemodel:
     attributes:
       assembly:
-        assembly_type: Tipus d'assemblea
-        assembly_type_other: Altre tipus d'assemblea
-        parent_id: Assemblea principal
+        assembly_type: Tipus d'òrgan
+        assembly_type_other: Altre tipus d'òrgan
+        parent_id: Òrgan principal
         participatory_processes_ids: Processos participatius relacionats
   activerecord:
     models:
       decidim/assembly:
-        one: Assemblea
-        other: Assemblees
+        one: Òrgan
+        other: Òrgans
       decidim/assembly_member:
-        one: Membre de l'assemblea
-        other: Membres de l'assemblea
+        one: Membre de l'òrgan
+        other: Membres de l'òrgan
       decidim/assembly_user_role:
-        one: Rol d'usuari de l'assemblea
-        other: Rol dels usuaris de l'assemblea
+        one: Rol d'usuari de l'òrgan
+        other: Rol dels usuaris de l'òrgan
   decidim:
     admin:
       actions:
-        new_assembly: Nova assemblea
+        new_assembly: Nou òrgan
       assemblies:
         create:
-          error: S'ha produït un error en crear una nova assemblea.
-          success: Assemblea creada correctament.
+          error: S'ha produït un error en crear un nou òrgan.
+          success: Òrgan creat correctament.
         index:
-          not_published: No publicada
+          not_published: No publicat
           private: Privat
           public: Públic
           published: Publicat
         new:
-          title: Nova assemblea
+          title: Nou òrgan
         update:
-          error: S'ha produït un error en actualitzar aquesta assemblea.
-          success: L'assemblea s'ha actualitzat correctament.
+          error: S'ha produït un error en actualitzar aquest òrgan.
+          success: L'òrgan s'ha actualitzat correctament.
       assemblies_copies:
         create:
-          error: S'ha produït un error en duplicar aquesta assemblea.
-          success: L'assemblea s'ha duplicat correctament.
+          error: S'ha produït un error en duplicar aquest òrgan.
+          success: L'òrgan s'ha duplicat correctament.
       assembly_copies:
         new:
-          title: Assemblea duplicada
+          title: Òrgan duplicat
       assembly_members:
         create:
-          error: S'ha produït un error en afegir un membre per a aquest assemblea.
-          success: Membre creat amb èxit per a aquesta assemblea.
+          error: S'ha produït un error en afegir un membre per a aquest òrgan.
+          success: Membre creat amb èxit per a aquest òrgan.
         destroy:
-          success: Membre eliminat amb èxit per a aquesta assemblea.
+          success: Membre eliminat amb èxit per a aquest òrgan.
         edit:
-          title: Actualitza el membre de l'assemblea.
+          title: Actualitza el membre de l'òrgan.
         index:
-          assembly_members_title: Membres de l'assemblea
+          assembly_members_title: Membres de l'òrgan
         new:
-          title: Nou membre de l'assemblea.
+          title: Nou membre de l'òrgan.
         update:
-          error: S'ha produït un error en actualitzar el membre d'aquesta assemblea.
-          success: Membre actualitzat amb èxit per a aquesta assemblea.
+          error: S'ha produït un error en actualitzar el membre d'aquest òrgan.
+          success: Membre actualitzat amb èxit per a aquest òrgan.
       assembly_publications:
         create:
-          error: S'ha produït un error en publicar aquesta assemblea.
-          success: Assemblea publicada amb èxit.
+          error: S'ha produït un error en publicar aquest òrgan.
+          success: Òrgan publicat amb èxit.
         destroy:
-          error: S'ha produït un error en despublicar aquesta assemblea.
-          success: Assemblea despublicada amb èxit.
+          error: S'ha produït un error en despublicar aquest òrgan.
+          success: Òrgan despublicat amb èxit.
       assembly_user_roles:
         create:
-          error: S'ha produït un error en afegir un usuari per a aquesta assamblea.
-          success: L'usuari s'ha afegit correctament a aquesta assemblea.
+          error: S'ha produït un error en afegir un usuari per a aquest òrgan.
+          success: L'usuari s'ha afegit correctament a aquest òrgan.
         destroy:
-          success: L'usuari s'ha eliminat d'aquesta assemblea correctament.
+          success: L'usuari s'ha eliminat d'aquest òrgan correctament.
         edit:
-          title: Actualitza l'usuari de l'assemblea.
+          title: Actualitza l'usuari de l'òrgan.
           update: Actualitza
         index:
-          assembly_admins_title: Usuaris de l'assemblea
+          assembly_admins_title: Usuaris de l'òrgan
         new:
-          title: Nou usuari de l'assemblea.
+          title: Nou usuari de l'òrgan.
         update:
-          error: S'ha produït un error en l'actualització d'un usuari per a aquesta assemblea.
-          success: L'usuari s'ha actualitzat correctament per a aquesta assemblea.
+          error: S'ha produït un error en l'actualització d'un usuari per a aquest òrgan.
+          success: L'usuari s'ha actualitzat correctament per a aquest òrgan.
       menu:
-        assemblies: Assemblees
+        assemblies: Òrgans
         assemblies_submenu:
-          assembly_admins: Usuaris de l'assemblea
+          assembly_admins: Usuaris de l'òrgan
       models:
         assembly:
-          name: Assemblea
+          name: Òrgan
         assembly_user_role:
-          name: Usuari de l'assemblea
+          name: Usuari de l'òrgan
       titles:
-        assemblies: Assemblees
+        assemblies: Òrgans
     admin_log:
       assembly:
-        create: "%{user_name} ha creat l'assemblea %{resource_name}"
-        publish: "%{user_name} ha publicat l'assemblea %{resource_name}"
-        unpublish: "%{user_name} ha despublicat l'assemblea %{resource_name}"
-        update: "%{user_name} ha actualitzat l'assemblea %{resource_name}"
+        create: "%{user_name} ha creat l'òrgan %{resource_name}"
+        publish: "%{user_name} ha publicat l'òrgan %{resource_name}"
+        unpublish: "%{user_name} ha despublicat l'òrgan %{resource_name}"
+        update: "%{user_name} ha actualitzat l'òrgan %{resource_name}"
       assembly_member:
-        create: "%{user_name} ha afegit el membre %{resource_name} a l'assemblea %{space_name}"
-        delete: "%{user_name} esborrat el membre %{resource_name} de l'assemblea %{space_name}"
-        update: "%{user_name} ha actualitzat el membre %{resource_name} de l'assemblea %{space_name}"
+        create: "%{user_name} ha afegit el membre %{resource_name} a l'òrgan %{space_name}"
+        delete: "%{user_name} esborrat el membre %{resource_name} de l'òrgan %{space_name}"
+        update: "%{user_name} ha actualitzat el membre %{resource_name} de l'òrgan %{space_name}"
       assembly_user_role:
-        create: "%{user_name} ha convidat %{resource_name} a l'assemblea %{space_name}"
-        delete: "%{user_name} ha eliminat l'usuari %{resource_name} de l'assemblea %{space_name}"
-        update: "%{user_name} ha canviat el rol de %{resource_name} a l'assemblea %{space_name}"
+        create: "%{user_name} ha convidat %{resource_name} a l'òrgan %{space_name}"
+        delete: "%{user_name} ha eliminat l'usuari %{resource_name} de l'òrgan %{space_name}"
+        update: "%{user_name} ha canviat el rol de %{resource_name} a l'òrgan %{space_name}"
     assemblies:
       admin:
         assemblies:
           form:
-            duration_help: Si la durada d'aquesta assemblea és limitada, selecciona la data de finalització. En cas contrari, apareixerà com a indefinida.
-            included_at_help: Selecciona la data en què es va afegir aquest assemblea a Decidim. No necessàriament ha de ser la mateixa que la data de creació.
-            select_an_assembly_type: Seleccioneu un tipus d'assemblea
-            slug_help: 'Els noms curts d''URL s''utilitzen per generar les URL que apunten a aquesta assemblea. Només accepta lletres, números i guions, i ha de començar amb una lletra. Exemple: %{url}'
+            duration_help: Si la durada d'aquest òrgan és limitada, selecciona la data de finalització. En cas contrari, apareixerà com a indefinit.
+            included_at_help: Selecciona la data en què es va afegir aquest òrgan a Decidim. No necessàriament ha de ser la mateixa que la data de creació.
+            select_an_assembly_type: Seleccioneu un tipus d'òrgan
+            slug_help: 'Els noms curts d''URL s''utilitzen per generar les URL que apunten a aquest òrgan. Només accepta lletres, números i guions, i ha de començar amb una lletra. Exemple: %{url}'
         assembly_copies:
           form:
-            slug_help: 'Els noms curts d''URL s''utilitzen per generar els URL que apunten a aquesta assemblea. Només accepta lletres, números i guions, i ha de començar amb una lletra. Exemple: %{url}'
+            slug_help: 'Els noms curts d''URL s''utilitzen per generar els URL que apunten a aquest òrgan. Només accepta lletres, números i guions, i ha de començar amb una lletra. Exemple: %{url}'
       content_blocks:
         highlighted_assemblies:
-          name: Asemblees destacades
+          name: òrgans destacats
       index:
-        title: Assemblees
+        title: Òrgans
       last_activity:
-        new_assembly: Nova assemblea
+        new_assembly: Nou òrgan
       pages:
         home:
           highlighted_assemblies:
-            active_assemblies: Assemblees actives
-            see_all_assemblies: Veure totes les assemblees
+            active_assemblies: Òrgans actius
+            see_all_assemblies: Veure tots els òrgans
       show:
         area: Àrea
-        assembly_type: Tipus d'assemblea
-        children: Assemblees
-        private_space: Aquesta és una assemblea privada
+        assembly_type: Tipus d'òrgan
+        children: Òrgans
+        private_space: Aquest és un òrgan privat
       statistics:
-        assemblies_count: Assemblees
+        assemblies_count: Òrgans
     help:
       participatory_spaces:
         assemblies:
-          contextual: "<p>Una assemblea és un grup format per membres d'una organització que es reuneixen periòdicament per prendre decisions sobre un àmbit o àrea específica de la mateixa.</p> <p>Les assemblees realitzen trobades, algunes són privades i altres són obertes. Si són obertes s’hi pot participar (per exemple: assistint si l'aforament ho permet, afegint punts a l'ordre del dia, o comentant les propostes i decisions preses per aquest òrgan).</p> <p>Exemples: Una assemblea general (que es reuneix un cop l'any per definir les línies principals d'acció de l'organització així com als seus òrgans executius per votació), una consell assessor d'igualtat (que es reuneix cada dos mesos per fer propostes de com millorar les relacions de gènere en l'organització), una comissió d'avaluació (que es reuneix cada mes per fer el seguiment d'un procés) o una òrgan de garanties (que recull les incidències, abusos o propostes de millora dels procediments de presa de decisions) són tot exemples d'assemblees.</p>\n"
-          page: "<p>Una assemblea és un grup format per membres d'una organització que es reuneixen periòdicament per prendre decisions sobre un àmbit o àrea específica de la mateixa.</p> <p>Les assemblees realitzen trobades, algunes són privades i altres són obertes. Si són obertes s’hi pot participar (per exemple: assistint si l'aforament ho permet, afegint punts a l'ordre del dia, o comentant les propostes i decisions preses per aquest òrgan).</p> <p>Exemples: Una assemblea general (que es reuneix un cop l'any per definir les línies principals d'acció de l'organització així com als seus òrgans executius per votació), una consell assessor d'igualtat (que es reuneix cada dos mesos per fer propostes de com millorar les relacions de gènere en l'organització), una comissió d'avaluació (que es reuneix cada mes per fer el seguiment d'un procés) o una òrgan de garanties (que recull les incidències, abusos o propostes de millora dels procediments de presa de decisions) són tot exemples d'assemblees.</p>\n"
-          title: Què són les assemblees?
+          contextual: "<p>Un òrgan és un grup format per membres d'una organització que es reuneixen periòdicament per prendre decisions sobre un àmbit o àrea específica del mateix.</p> <p>Els òrgans realitzen trobades, alguns són privats i altres són oberts. Si són oberts s’hi pot participar (per exemple: assistint si l'aforament ho permet, afegint punts a l'ordre del dia, o comentant les propostes i decisions preses per aquest òrgan).</p> <p>Exemples: Un òrgan general (que es reuneix un cop l'any per definir les línies principals d'acció de l'organització així com als seus òrgans executius per votació), unconsell assessor d'igualtat (que es reuneix cada dos mesos per fer propostes de com millorar les relacions de gènere en l'organització), una comissió d'avaluació (que es reuneix cada mes per fer el seguiment d'un procés) o una òrgan de garanties (que recull les incidències, abusos o propostes de millora dels procediments de presa de decisions) són tot exemples d'òrgans.</p>\n"
+          page: "<p>Un òrgan és un grup format per membres d'una organització que es reuneixen periòdicament per prendre decisions sobre un àmbit o àrea específica del mateix.</p> <p>Els òrgans realitzen trobades, alguns són privats i altres són oberts. Si són oberts s’hi pot participar (per exemple: assistint si l'aforament ho permet, afegint punts a l'ordre del dia, o comentant les propostes i decisions preses per aquest òrgan).</p> <p>Exemples: Un òrgan general (que es reuneix un cop l'any per definir les línies principals d'acció de l'organització així com als seus òrgans executius per votació), un consell assessor d'igualtat (que es reuneix cada dos mesos per fer propostes de com millorar les relacions de gènere en l'organització), una comissió d'avaluació (que es reuneix cada mes per fer el seguiment d'un procés) o una òrgan de garanties (que recull les incidències, abusos o propostes de millora dels procediments de presa de decisions) són tot exemples d'òrgans.</p>\n"
+          title: Què són els òrgans?
     log:
       value_types:
         assembly_presenter:
-          not_found: 'L''assemblea no s''ha trobada a la base de dades (ID: %{id})'
+          not_found: 'L''òrgan no s''ha trobat a la base de dades (ID: %{id})'
     menu:
-      assemblies: Assemblees
+      assemblies: Òrgans
     metrics:
       assemblies:
-        description: Nombre d'assemblees creades
-        object: assemblees
-        title: Assemblees
+        description: Nombre d'òrgans creats
+        object: òrgans
+        title: Òrgans
   layouts:
     decidim:
       assemblies:
         index:
-          promoted_assemblies: Assemblees destacades
+          promoted_assemblies: Òrgans destacats
         order_by_assemblies:
           assemblies:
-            one: "%{count} assemblea"
-            other: "%{count} assemblees"
+            one: "%{count} òrgan"
+            other: "%{count} òrgans"
       assembly_navigation:
-        assembly_menu_item: L'assemblea
+        assembly_menu_item: L'òrgan
