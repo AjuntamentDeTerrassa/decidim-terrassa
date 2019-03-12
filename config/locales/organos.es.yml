@@ -4,167 +4,163 @@ es:
       assembly:
         assembly_type: Tipo de órgano
         assembly_type_other: Otro tipo de órgano
-        parent_id: Asamblea padre
+        parent_id: Órgano padre
   activerecord:
     models:
       decidim/assembly:
-        one: Asamblea
-        other: Asambleas
+        one: Órgano
+        other: Órganos
       decidim/assembly_member:
-        one: Miembro de la asamblea
-        other: Miembros de la asamblea
+        one: Miembro del órgano
+        other: Miembros del órgano
       decidim/assembly_user_role:
-        one: Rol de usuario de la asamblea
-        other: Roles de usuario de la asamblea
+        one: Rol de usuario del órgano
+        other: Roles de usuario del órgano
   decidim:
     admin:
       actions:
-        new_assembly: Nueva asamblea
+        new_assembly: Nuevo órgano
       assemblies:
         create:
-          error: Se produjo un error al crear una nueva asamblea.
-          success: Asamblea creada correctamente.
+          error: Se produjo un error al crear un nuevo órgano.
+          success: Órgano creada correctamente.
         index:
           not_published: No publicado
           private: Privado
           public: Público
           published: Publicado
         new:
-          title: Nueva asamblea
+          title: Nuevo órgano
         update:
-          error: Se ha producido un error al actualizar esta asamblea.
-          success: La asamblea se ha actualizado correctamente.
+          error: Se ha producido un error al actualizar este órgano.
+          success: El órgano se ha actualizado correctamente.
       assemblies_copies:
         create:
-          error: Se produjo un error al duplicar esta asamblea.
-          success: Asamblea duplicada correctamente.
+          error: Se produjo un error al duplicar este órgano.
+          success: Órgano duplicada correctamente.
       assembly_copies:
         new:
-          title: Duplicar asamblea
+          title: Duplicar órgano
       assembly_members:
         create:
-          error: Se produjo un error al agregar un miembro para esta asamblea.
-          success: Miembro creado con éxito para esta asamblea.
+          error: Se produjo un error al agregar un miembro para este órgano.
+          success: Miembro creado con éxito para este órgano.
         destroy:
-          success: Miembro eliminado con éxito en esta asamblea.
+          success: Miembro eliminado con éxito en este órgano.
         edit:
-          title: Actualizar miembro de la asamblea.
+          title: Actualizar miembro del órgano.
         index:
-          assembly_members_title: Miembros de la asamblea
+          assembly_members_title: Miembros del órgano
         new:
-          title: Nuevo miembro de la asamblea.
+          title: Nuevo miembro del órgano.
         update:
-          error: Se produjo un error al actualizar el miembro para esta asamblea.
-          success: Miembro actualizado con éxito para esta asamblea.
+          error: Se produjo un error al actualizar el miembro para este órgano.
+          success: Miembro actualizado con éxito para este órgano.
       assembly_publications:
         create:
-          error: Se produjo un error al publicar esta asamblea.
-          success: Asamblea publicada con éxito.
+          error: Se produjo un error al publicar este órgano.
+          success: Órgano publicada con éxito.
         destroy:
-          error: Se produjo un error al despublicar esta asamblea.
-          success: Asamblea despublicada con éxito.
+          error: Se produjo un error al despublicar este órgano.
+          success: Órgano despublicada con éxito.
       assembly_user_roles:
         create:
-          error: Se ha producido un error al agregar un usuario para esta asamblea.
-          success: Usuario agregado conéxito a esta asamblea.
+          error: Se ha producido un error al agregar un usuario para este órgano.
+          success: Usuario agregado conéxito a este órgano.
         destroy:
-          success: Usuario eliminado con éxito de esta asamblea.
+          success: Usuario eliminado con éxito de este órgano.
         edit:
-          title: Actualizar el usuario de la asamblea.
+          title: Actualizar el usuario del órgano.
         index:
-          assembly_admins_title: Usuarios de la Asamblea
+          assembly_admins_title: Usuarios del órgano
         new:
-          title: Nuevo usuario de la asamblea.
+          title: Nuevo usuario del órgano.
         update:
-          error: Ha habido un error al actualizar un usuario para esta asamblea.
-          success: Usuario actualizado con éxito para esta asamblea.
+          error: Ha habido un error al actualizar un usuario para este órgano.
+          success: Usuario actualizado con éxito para este órgano.
       menu:
-        assemblies: Asambleas
+        assemblies: Órganos
         assemblies_submenu:
-          assembly_admins: Usuarios de la asamblea
+          assembly_admins: Usuarios del órgano
       models:
         assembly:
-          name: Asamblea
+          name: Órgano
         assembly_user_role:
-          name: Usuario de la asamblea
-          roles:
-            admin: Administrador
-            collaborator: Colaborador
-            moderator: Moderador
+          name: Usuario del órgano
       titles:
-        assemblies: Asambleas
+        assemblies: Órganos
     admin_log:
       assembly:
-        create: "%{user_name} creó la asamblea %{resource_name}"
-        publish: "%{user_name} publicó la asamblea %{resource_name}"
-        unpublish: "%{user_name} despublicó la asamblea %{resource_name}"
-        update: "%{user_name} actualizó la asamblea %{resource_name}"
+        create: "%{user_name} creó el órgano %{resource_name}"
+        publish: "%{user_name} publicó el órgano %{resource_name}"
+        unpublish: "%{user_name} despublicó el órgano %{resource_name}"
+        update: "%{user_name} actualizó el órgano %{resource_name}"
       assembly_member:
-        create: "%{user_name} creó el miembro %{resource_name} en la asamblea %{space_name}"
-        delete: "%{user_name} eliminó %{resource_name} de la asamblea %{space_name}"
-        update: "%{user_name} actualizó el miembro %{resource_name} de la asamblea %{space_name}"
+        create: "%{user_name} creó el miembro %{resource_name} en el órgano %{space_name}"
+        delete: "%{user_name} eliminó %{resource_name} del órgano %{space_name}"
+        update: "%{user_name} actualizó el miembro %{resource_name} del órgano %{space_name}"
       assembly_user_role:
-        create: "%{user_name} invitó %{resource_name} a la asamblea %{space_name}"
-        delete: "%{user_name} eliminó al usuario %{resource_name} de la asamblea %{space_name}"
-        update: "%{user_name} cambió el rol de %{resource_name} en la asamblea %{space_name}"
+        create: "%{user_name} invitó %{resource_name} al órgano %{space_name}"
+        delete: "%{user_name} eliminó al usuario %{resource_name} del órgano %{space_name}"
+        update: "%{user_name} cambió el rol de %{resource_name} en el órgano %{space_name}"
     assemblies:
       admin:
         assemblies:
           form:
-            duration_help: Si la duración de esta asamblea es limitada, selecciona la fecha de finalización. De lo contrario, aparecerá como indefinida.
-            included_at_help: Selecciona la fecha en que se agregó este ensamblaje a Decidim. No necesariamente tiene que ser la misma que la fecha de creación.
-            select_a_created_by: Selecciona creada por
-            select_an_assembly_type: Selecciona tipo de asamblea
-            select_parent_assembly: Selecciona asamblea principal
-            slug_help: 'Los textos cortos de URL se utilizan para generar las URL que apuntan a esta asamblea. Sólo acepta letras, números y guiones, y debe comenzar con una letra. Ejemplo: %{url}'
+            duration_help: Si la duración de este órgano es limitada, selecciona la fecha de finalización. De lo contrario, aparecerá como indefinido.
+            included_at_help: Selecciona la fecha en que se agregó este órgano a Decidim. No necesariamente tiene que ser la misma que la fecha de creación.
+            select_a_created_by: Selecciona creado por
+            select_an_assembly_type: Selecciona tipo de órgano
+            select_parent_assembly: Selecciona órgano principal
+            slug_help: 'Los textos cortos de URL se utilizan para generar las URL que apuntan a este órgano. Sólo acepta letras, números y guiones, y debe comenzar con una letra. Ejemplo: %{url}'
         assembly_copies:
           form:
-            slug_help: 'Los textos cortos de URL se utilizan para generar las URL que apuntan a esta asamblea. Sólo acepta letras, números y guiones, y debe comenzar con una letra. Ejemplo: %{url}'
+            slug_help: 'Los textos cortos de URL se utilizan para generar las URL que apuntan a este órgano. Sólo acepta letras, números y guiones, y debe comenzar con una letra. Ejemplo: %{url}'
       content_blocks:
         highlighted_assemblies:
-          name: Asambleas destacadas
+          name: Órganos destacados
       filter:
         all: Todos
       index:
-        title: Asambleas
+        title: Órganos
       last_activity:
-        new_assembly: Nueva asamblea
+        new_assembly: Nuevo órgano
       pages:
         home:
           highlighted_assemblies:
-            active_assemblies: Asambleas activas
-            see_all_assemblies: Ver todas las asambleas
+            active_assemblies: Órganos activos
+            see_all_assemblies: Ver todos los órganos
       show:
-        assembly_type: Tipo de asambleas
-        children: Asambleas
-        private_space: Esta es una asamblea privada
+        assembly_type: Tipo de órganos
+        children: Órganos
+        private_space: Este es una órgano privado
       statistics:
-        assemblies_count: Asambleas
+        assemblies_count: Órganos
     help:
       participatory_spaces:
         assemblies:
-          contextual: "<p>Una asamblea es un grupo formado por miembros de una organización que se reúnen periódicamente para tomar decisiones sobre un ámbito o área específica de la misma.</p> <p>Las asambleas realizan encuentros, algunas son privadas y otras son abiertas. Si son abiertas se puede participar en ellas (por ejemplo: asistiendo si el aforo lo permite, añadiendo puntos al orden del día, o comentando las propuestas y decisiones tomadas por dicho órgano).</p> <p>Ejemplos: Una asamblea general (que se reúne una vez al año para definir las líneas principales de acción de la organización así como a sus órganos ejecutivos por votación), una consejo asesor de igualdad (que se reúne cada dos meses para realizar propuestas de cómo mejorar las relaciones de género en la organización), una comisión de evaluación (que se reúne cada mes para realizar el seguimiento de un proceso) o una órgano de garantías (que recoge las incidencias, abusos o propuestas de mejora de los procedimientos de toma de decisiones) son todo ejemplos de asambleas.</p>\n"
-          page: "<p>Una asamblea es un grupo formado por miembros de una organización que se reúnen periódicamente para tomar decisiones sobre un ámbito o área específica de la misma.</p> <p>Las asambleas realizan encuentros, algunas son privadas y otras son abiertas. Si son abiertas se puede participar en ellas (por ejemplo: asistiendo si el aforo lo permite, añadiendo puntos al orden del día, o comentando las propuestas y decisiones tomadas por dicho órgano).</p> <p>Ejemplos: Una asamblea general (que se reúne una vez al año para definir las líneas principales de acción de la organización así como a sus órganos ejecutivos por votación), una consejo asesor de igualdad (que se reúne cada dos meses para realizar propuestas de cómo mejorar las relaciones de género en la organización), una comisión de evaluación (que se reúne cada mes para realizar el seguimiento de un proceso) o una órgano de garantías (que recoge las incidencias, abusos o propuestas de mejora de los procedimientos de toma de decisiones) son todo ejemplos de asambleas.</p>\n"
-          title: '¿Qué son las asambleas?'
+          contextual: "<p>Un órgano es un grupo formado por miembros de una organización que se reúnen periódicamente para tomar decisiones sobre un ámbito o área específica del mismo.</p> <p>Los órganos realizan encuentros, algunos son privados y otros son abiertos. Si son abiertos se puede participar en ellos (por ejemplo: asistiendo si el aforo lo permite, añadiendo puntos al orden del día, o comentando las propuestas y decisiones tomadas por dicho órgano).</p> <p>Ejemplos: Un órgano general (que se reúne una vez al año para definir las líneas principales de acción de la organización así como a sus órganos ejecutivos por votación), un consejo asesor de igualdad (que se reúne cada dos meses para realizar propuestas de cómo mejorar las relaciones de género en la organización), una comisión de evaluación (que se reúne cada mes para realizar el seguimiento de un proceso) o un órgano de garantías (que recoge las incidencias, abusos o propuestas de mejora de los procedimientos de toma de decisiones) son todo ejemplos de órganos.</p>\n"
+          page: "<p>Un órgano es un grupo formado por miembros de una organización que se reúnen periódicamente para tomar decisiones sobre un ámbito o área específica del mismo.</p> <p>Los órganos realizan encuentros, algunos son privados y otros son abiertos. Si son abiertos se puede participar en ellos (por ejemplo: asistiendo si el aforo lo permite, añadiendo puntos al orden del día, o comentando las propuestas y decisiones tomadas por dicho órgano).</p> <p>Ejemplos: Un órgano general (que se reúne una vez al año para definir las líneas principales de acción de la organización así como a sus órganos ejecutivos por votación), un consejo asesor de igualdad (que se reúne cada dos meses para realizar propuestas de cómo mejorar las relaciones de género en la organización), una comisión de evaluación (que se reúne cada mes para realizar el seguimiento de un proceso) o un órgano de garantías (que recoge las incidencias, abusos o propuestas de mejora de los procedimientos de toma de decisiones) son todo ejemplos de órganos.</p>\n"
+          title: '¿Qué son los órganos?'
     log:
       value_types:
         assembly_presenter:
-          not_found: 'No se encontró la asamblea en la base de datos (ID: %{id})'
+          not_found: 'No se encontró el órgano en la base de datos (ID: %{id})'
     menu:
-      assemblies: Asambleas
+      assemblies: Órganos
     metrics:
       assemblies:
-        description: Número de asambleas creadas
-        object: asambleas
-        title: Asambleas
+        description: Número de órganos creados
+        object: órganos
+        title: Órganos
   layouts:
     decidim:
       assemblies:
         index:
-          promoted_assemblies: Asambleas destacadas
+          promoted_assemblies: Órganos destacados
         order_by_assemblies:
           assemblies:
-            one: "%{count} asambleas"
-            other: "%{count} asambleas"
+            one: "%{count} órgano"
+            other: "%{count} órganos"
       assembly_navigation:
-        assembly_menu_item: La asamblea
+        assembly_menu_item: El órgano
