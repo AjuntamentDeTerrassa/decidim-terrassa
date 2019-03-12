@@ -5,7 +5,6 @@ ca:
         assembly_type: Tipus d'òrgan
         assembly_type_other: Altre tipus d'òrgan
         parent_id: Òrgan principal
-        participatory_processes_ids: Processos participatius relacionats
   activerecord:
     models:
       decidim/assembly:
