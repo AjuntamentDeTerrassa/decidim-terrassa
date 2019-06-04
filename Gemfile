@@ -1,13 +1,15 @@
 source "https://rubygems.org"
 
-ruby '2.5.3'
+ruby '2.6.3'
 
-DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "0.16-stable" }
+DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "0.17-stable" }
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-initiatives", DECIDIM_VERSION
-gem "decidim-file_authorization_handler", git: "https://github.com/CodiTramuntana/decidim-file_authorization_handler.git", branch: "fix/ensure_all_data_properly_encoded"
+gem "decidim-file_authorization_handler", git: "https://github.com/MarsBased/decidim-file_authorization_handler.git", branch: "master"
 gem "virtus-multiparams"
+gem "wicked_pdf"
+gem "wkhtmltopdf-binary"
 
 gem 'puma'
 gem 'uglifier'
