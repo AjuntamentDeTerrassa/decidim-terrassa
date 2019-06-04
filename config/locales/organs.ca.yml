@@ -26,7 +26,7 @@ ca:
           success: Òrgan creat correctament.
         index:
           not_published: No publicat
-          private: Privat
+          private: De participació restringida
           public: Públic
           published: Publicat
         new:
@@ -131,14 +131,14 @@ ca:
         area: Àrea
         assembly_type: Tipus d'òrgan
         children: Òrgans
-        private_space: Aquest és un òrgan privat
+        private_space: Aquest és un òrgan de participació restringida
       statistics:
         assemblies_count: Òrgans
     help:
       participatory_spaces:
         assemblies:
-          contextual: "<p>Un òrgan és un grup format per membres d'una organització que es reuneixen periòdicament per prendre decisions sobre un àmbit o àrea específica del mateix.</p> <p>Els òrgans realitzen trobades, alguns són privats i altres són oberts. Si són oberts s’hi pot participar (per exemple: assistint si l'aforament ho permet, afegint punts a l'ordre del dia, o comentant les propostes i decisions preses per aquest òrgan).</p> <p>Exemples: Un òrgan general (que es reuneix un cop l'any per definir les línies principals d'acció de l'organització així com als seus òrgans executius per votació), unconsell assessor d'igualtat (que es reuneix cada dos mesos per fer propostes de com millorar les relacions de gènere en l'organització), una comissió d'avaluació (que es reuneix cada mes per fer el seguiment d'un procés) o una òrgan de garanties (que recull les incidències, abusos o propostes de millora dels procediments de presa de decisions) són tot exemples d'òrgans.</p>\n"
-          page: "<p>Un òrgan és un grup format per membres d'una organització que es reuneixen periòdicament per prendre decisions sobre un àmbit o àrea específica del mateix.</p> <p>Els òrgans realitzen trobades, alguns són privats i altres són oberts. Si són oberts s’hi pot participar (per exemple: assistint si l'aforament ho permet, afegint punts a l'ordre del dia, o comentant les propostes i decisions preses per aquest òrgan).</p> <p>Exemples: Un òrgan general (que es reuneix un cop l'any per definir les línies principals d'acció de l'organització així com als seus òrgans executius per votació), un consell assessor d'igualtat (que es reuneix cada dos mesos per fer propostes de com millorar les relacions de gènere en l'organització), una comissió d'avaluació (que es reuneix cada mes per fer el seguiment d'un procés) o una òrgan de garanties (que recull les incidències, abusos o propostes de millora dels procediments de presa de decisions) són tot exemples d'òrgans.</p>\n"
+          contextual: "<p>Un òrgan és un grup format per membres d'una organització que es reuneixen periòdicament per prendre decisions sobre un àmbit o àrea específica del mateix.</p> <p>Els òrgans realitzen trobades, alguns són de participació restringida i altres són oberts. Si són oberts s’hi pot participar (per exemple: assistint si l'aforament ho permet, afegint punts a l'ordre del dia, o comentant les propostes i decisions preses per aquest òrgan).</p> <p>Exemples: Un òrgan general (que es reuneix un cop l'any per definir les línies principals d'acció de l'organització així com als seus òrgans executius per votació), unconsell assessor d'igualtat (que es reuneix cada dos mesos per fer propostes de com millorar les relacions de gènere en l'organització), una comissió d'avaluació (que es reuneix cada mes per fer el seguiment d'un procés) o una òrgan de garanties (que recull les incidències, abusos o propostes de millora dels procediments de presa de decisions) són tot exemples d'òrgans.</p>\n"
+          page: "<p>Un òrgan és un grup format per membres d'una organització que es reuneixen periòdicament per prendre decisions sobre un àmbit o àrea específica del mateix.</p> <p>Els òrgans realitzen trobades, alguns són de participació restringida i altres són oberts. Si són oberts s’hi pot participar (per exemple: assistint si l'aforament ho permet, afegint punts a l'ordre del dia, o comentant les propostes i decisions preses per aquest òrgan).</p> <p>Exemples: Un òrgan general (que es reuneix un cop l'any per definir les línies principals d'acció de l'organització així com als seus òrgans executius per votació), un consell assessor d'igualtat (que es reuneix cada dos mesos per fer propostes de com millorar les relacions de gènere en l'organització), una comissió d'avaluació (que es reuneix cada mes per fer el seguiment d'un procés) o una òrgan de garanties (que recull les incidències, abusos o propostes de millora dels procediments de presa de decisions) són tot exemples d'òrgans.</p>\n"
           title: Què són els òrgans?
     log:
       value_types:
