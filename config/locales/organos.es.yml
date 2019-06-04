@@ -26,7 +26,7 @@ es:
           success: Órgano creada correctamente.
         index:
           not_published: No publicado
-          private: Privado
+          private: De participación restringida
           public: Público
           published: Publicado
         new:
@@ -133,14 +133,14 @@ es:
       show:
         assembly_type: Tipo de órganos
         children: Órganos
-        private_space: Este es una órgano privado
+        private_space: Este es una órgano de participación restringida
       statistics:
         assemblies_count: Órganos
     help:
       participatory_spaces:
         assemblies:
-          contextual: "<p>Un órgano es un grupo formado por miembros de una organización que se reúnen periódicamente para tomar decisiones sobre un ámbito o área específica del mismo.</p> <p>Los órganos realizan encuentros, algunos son privados y otros son abiertos. Si son abiertos se puede participar en ellos (por ejemplo: asistiendo si el aforo lo permite, añadiendo puntos al orden del día, o comentando las propuestas y decisiones tomadas por dicho órgano).</p> <p>Ejemplos: Un órgano general (que se reúne una vez al año para definir las líneas principales de acción de la organización así como a sus órganos ejecutivos por votación), un consejo asesor de igualdad (que se reúne cada dos meses para realizar propuestas de cómo mejorar las relaciones de género en la organización), una comisión de evaluación (que se reúne cada mes para realizar el seguimiento de un proceso) o un órgano de garantías (que recoge las incidencias, abusos o propuestas de mejora de los procedimientos de toma de decisiones) son todo ejemplos de órganos.</p>\n"
-          page: "<p>Un órgano es un grupo formado por miembros de una organización que se reúnen periódicamente para tomar decisiones sobre un ámbito o área específica del mismo.</p> <p>Los órganos realizan encuentros, algunos son privados y otros son abiertos. Si son abiertos se puede participar en ellos (por ejemplo: asistiendo si el aforo lo permite, añadiendo puntos al orden del día, o comentando las propuestas y decisiones tomadas por dicho órgano).</p> <p>Ejemplos: Un órgano general (que se reúne una vez al año para definir las líneas principales de acción de la organización así como a sus órganos ejecutivos por votación), un consejo asesor de igualdad (que se reúne cada dos meses para realizar propuestas de cómo mejorar las relaciones de género en la organización), una comisión de evaluación (que se reúne cada mes para realizar el seguimiento de un proceso) o un órgano de garantías (que recoge las incidencias, abusos o propuestas de mejora de los procedimientos de toma de decisiones) son todo ejemplos de órganos.</p>\n"
+          contextual: "<p>Un órgano es un grupo formado por miembros de una organización que se reúnen periódicamente para tomar decisiones sobre un ámbito o área específica del mismo.</p> <p>Los órganos realizan encuentros, algunos son de participación restringida y otros son abiertos. Si son abiertos se puede participar en ellos (por ejemplo: asistiendo si el aforo lo permite, añadiendo puntos al orden del día, o comentando las propuestas y decisiones tomadas por dicho órgano).</p> <p>Ejemplos: Un órgano general (que se reúne una vez al año para definir las líneas principales de acción de la organización así como a sus órganos ejecutivos por votación), un consejo asesor de igualdad (que se reúne cada dos meses para realizar propuestas de cómo mejorar las relaciones de género en la organización), una comisión de evaluación (que se reúne cada mes para realizar el seguimiento de un proceso) o un órgano de garantías (que recoge las incidencias, abusos o propuestas de mejora de los procedimientos de toma de decisiones) son todo ejemplos de órganos.</p>\n"
+          page: "<p>Un órgano es un grupo formado por miembros de una organización que se reúnen periódicamente para tomar decisiones sobre un ámbito o área específica del mismo.</p> <p>Los órganos realizan encuentros, algunos son de participación restringida y otros son abiertos. Si son abiertos se puede participar en ellos (por ejemplo: asistiendo si el aforo lo permite, añadiendo puntos al orden del día, o comentando las propuestas y decisiones tomadas por dicho órgano).</p> <p>Ejemplos: Un órgano general (que se reúne una vez al año para definir las líneas principales de acción de la organización así como a sus órganos ejecutivos por votación), un consejo asesor de igualdad (que se reúne cada dos meses para realizar propuestas de cómo mejorar las relaciones de género en la organización), una comisión de evaluación (que se reúne cada mes para realizar el seguimiento de un proceso) o un órgano de garantías (que recoge las incidencias, abusos o propuestas de mejora de los procedimientos de toma de decisiones) son todo ejemplos de órganos.</p>\n"
           title: '¿Qué son los órganos?'
     log:
       value_types:
