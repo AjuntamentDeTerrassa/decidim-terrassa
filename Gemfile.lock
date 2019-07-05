@@ -69,6 +69,10 @@ GIT
     decidim-comments (0.18.0)
       decidim-core (= 0.18.0)
       jquery-rails (~> 4.0)
+    decidim-consultations (0.18.0)
+      decidim-admin (= 0.18.0)
+      decidim-comments (= 0.18.0)
+      decidim-core (= 0.18.0)
     decidim-core (0.18.0)
       active_link_to (~> 1.0)
       autoprefixer-rails (~> 8.0)
@@ -796,6 +800,7 @@ DEPENDENCIES
   dalli
   database_cleaner
   decidim!
+  decidim-consultations!
   decidim-dev!
   decidim-file_authorization_handler!
   decidim-initiatives!
