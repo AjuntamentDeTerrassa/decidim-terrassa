@@ -9,6 +9,14 @@ es:
         document_type: Tipo de documento
         postal_code: Código postal
         date_of_birth: Fecha de nacimiento
+      group:
+        about: Acerca de
+        avatar: Imagen de perfil
+        document_number: Número de documento
+        email: Correo electrónico
+        name: Nombre
+        nickname: Alias
+        phone: Teléfono
   census_authorization:
     form:
       scope_prompt: Por favor, selecciona tu distrito

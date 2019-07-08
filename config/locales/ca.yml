@@ -9,6 +9,14 @@ ca:
         document_type: Tipus de document
         postal_code: Codi postal
         date_of_birth: Data de naixement
+      group:
+        about: Quant a
+        avatar: Imatge de perfil
+        document_number: Número de document
+        email: Correu electrònic
+        name: Nom
+        nickname: Àlies
+        phone: Telèfon
   census_authorization:
     form:
       scope_prompt: Si us plau, selecciona el teu districte
