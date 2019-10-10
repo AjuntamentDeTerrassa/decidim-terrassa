@@ -43,7 +43,8 @@ end
 
 Decidim.menu :menu do |menu|
   menu.item I18n.t("menu.normativa"),
-    "https://participa.terrassa.cat/processes_groups/6",
+    "/processes_groups/6",
     position: 3,
-    active: :inclusive
+    active: :inclusive,
+    if: Decidim::ParticipatoryProcess.where(decidim_participatory_process_group_id: 6).published.public_spaces.any?
 end
