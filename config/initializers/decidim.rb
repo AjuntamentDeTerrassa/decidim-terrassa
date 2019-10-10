@@ -40,3 +40,10 @@ Decidim::Verifications.register_workflow(:census_authorization_handler) do |auth
     options.attribute :district, type: :string, required: false
   end
 end
+
+Decidim.menu :menu do |menu|
+  menu.item I18n.t("menu.normativa"),
+    "https://participa.terrassa.cat/processes_groups/6",
+    position: 3,
+    active: :inclusive
+end

@@ -52,3 +52,5 @@ ca:
       proposals:
         filters:
           scopes: Barri
+  menu:
+    normativa: Participació en normativa

@@ -52,3 +52,5 @@ es:
       proposals:
         filters:
           scopes: Barrio
+  menu:
+    normativa: Participación en normativa
