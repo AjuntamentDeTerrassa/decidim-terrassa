@@ -15,6 +15,7 @@ gem "wkhtmltopdf-binary"
 gem 'puma'
 gem 'uglifier'
 gem 'faker'
+gem 'sprockets', '~> 3.7.2'
 
 group :development, :test do
   gem 'byebug', platform: :mri
