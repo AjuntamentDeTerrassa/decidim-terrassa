@@ -12,6 +12,8 @@ gem 'uglifier'
 gem 'faker'
 gem "sprockets", "~> 3.7.2"
 
+gem "geocoder", "~> 1.5.2"
+
 group :development, :test do
   gem 'byebug', platform: :mri
   gem "decidim-dev", DECIDIM_VERSION
