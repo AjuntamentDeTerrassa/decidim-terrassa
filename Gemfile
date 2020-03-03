@@ -12,6 +12,8 @@ gem "virtus-multiparams"
 gem "wicked_pdf"
 gem "wkhtmltopdf-binary"
 
+gem "geocoder", "~> 1.5.2"
+
 gem 'puma'
 gem 'uglifier'
 gem 'faker'
