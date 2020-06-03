@@ -1,4 +1,12 @@
 GIT
+  remote: git@github.com:mainio/decidim-module-term_customizer.git
+  revision: bed25fe3361531f562cf24102f9becfede1bb148
+  specs:
+    decidim-term_customizer (0.20.0)
+      decidim-admin (~> 0.20.0)
+      decidim-core (~> 0.20.0)
+
+GIT
   remote: https://github.com/MarsBased/decidim-file_authorization_handler.git
   revision: f01aaa7fcc9518228f7f079ca06c58aada8230c2
   branch: master
@@ -803,6 +811,7 @@ DEPENDENCIES
   decidim-dev (~> 0.20.0)
   decidim-file_authorization_handler!
   decidim-initiatives (~> 0.20.0)
+  decidim-term_customizer!
   faker
   fog-aws
   geocoder (~> 1.5.2)

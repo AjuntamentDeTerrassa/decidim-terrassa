@@ -1,52 +1,58 @@
-source "https://rubygems.org"
+# frozen_string_literal: true
+
+source 'https://rubygems.org'
 
 ruby '2.6.5'
 
-DECIDIM_VERSION = "~> 0.20.0"
+DECIDIM_VERSION = '~> 0.20.0'
 
-gem "decidim", DECIDIM_VERSION
-gem "decidim-initiatives", DECIDIM_VERSION
-gem "decidim-consultations", DECIDIM_VERSION
-gem "decidim-file_authorization_handler", git: "https://github.com/MarsBased/decidim-file_authorization_handler.git", branch: "master"
-gem "virtus-multiparams"
-gem "wicked_pdf"
-gem "wkhtmltopdf-binary"
+gem 'decidim', DECIDIM_VERSION
+gem 'decidim-consultations', DECIDIM_VERSION
+gem 'decidim-file_authorization_handler',
+    git: 'https://github.com/MarsBased/decidim-file_authorization_handler.git',
+    branch: 'master'
+gem 'decidim-initiatives', DECIDIM_VERSION
+gem 'decidim-term_customizer',
+    git: 'git@github.com:mainio/decidim-module-term_customizer.git'
+gem 'virtus-multiparams'
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
 
-gem "geocoder", "~> 1.5.2"
+gem 'geocoder', '~> 1.5.2'
 
-gem 'puma'
-gem 'uglifier'
 gem 'faker'
+gem 'puma'
 gem 'sprockets', '~> 3.7.2'
+gem 'uglifier'
 
 group :development, :test do
   gem 'byebug', platform: :mri
-  gem "decidim-dev", DECIDIM_VERSION
+  gem 'decidim-dev', DECIDIM_VERSION
 end
 
 group :development do
+  gem 'launchy'
   gem 'listen'
   gem 'spring'
-  gem 'spring-watcher-listen'
   gem 'spring-commands-rspec'
-  gem 'launchy'
+  gem 'spring-watcher-listen'
 end
 
 group :production do
-  gem "rails_12factor"
-  gem "fog-aws"
   gem 'dalli'
-  gem 'sendgrid-ruby'
+  gem 'fog-aws'
+  gem 'lograge'
   gem 'newrelic_rpm'
-  gem "lograge"
-  gem "sentry-raven"
-  gem "sidekiq"
+  gem 'rails_12factor'
+  gem 'sendgrid-ruby'
+  gem 'sentry-raven'
+  gem 'sidekiq'
 end
 
 group :test do
-  gem "rspec-rails"
-  gem "database_cleaner"
+  gem 'database_cleaner'
+  gem 'rspec-rails'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
