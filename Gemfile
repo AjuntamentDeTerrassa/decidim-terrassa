@@ -13,7 +13,7 @@ gem 'decidim-file_authorization_handler',
     branch: 'master'
 gem 'decidim-initiatives', DECIDIM_VERSION
 gem 'decidim-term_customizer',
-    git: 'git@github.com:mainio/decidim-module-term_customizer.git'
+  git: 'https://github.com/mainio/decidim-module-term_customizer.git'
 gem 'virtus-multiparams'
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
