@@ -12,8 +12,8 @@ gem 'decidim-file_authorization_handler',
     git: 'https://github.com/MarsBased/decidim-file_authorization_handler.git',
     branch: 'master'
 gem 'decidim-initiatives', DECIDIM_VERSION
-gem 'decidim-term_customizer',
-  git: 'https://github.com/mainio/decidim-module-term_customizer.git'
+# gem 'decidim-term_customizer',
+#   git: 'https://github.com/mainio/decidim-module-term_customizer.git'
 gem 'virtus-multiparams'
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'

@@ -8,14 +8,6 @@ GIT
       decidim-admin (>= 0.15.0)
       rails (>= 5.2)
 
-GIT
-  remote: https://github.com/mainio/decidim-module-term_customizer.git
-  revision: bed25fe3361531f562cf24102f9becfede1bb148
-  specs:
-    decidim-term_customizer (0.20.0)
-      decidim-admin (~> 0.20.0)
-      decidim-core (~> 0.20.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -811,7 +803,6 @@ DEPENDENCIES
   decidim-dev (~> 0.20.0)
   decidim-file_authorization_handler!
   decidim-initiatives (~> 0.20.0)
-  decidim-term_customizer!
   faker
   fog-aws
   geocoder (~> 1.5.2)
