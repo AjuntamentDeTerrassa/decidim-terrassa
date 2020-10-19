@@ -33,7 +33,7 @@ describe "Authorizations", type: :system, perform_enqueued: true, with_authoriza
   end
 
   context "user account" do
-    let(:user) { create(:user, nickname: "test_user", :confirmed, organization: organization) }
+    let(:user) { create(:user, :confirmed, organization: organization, nickname: "test_user") }
 
     before do
       login_as user, scope: :user
