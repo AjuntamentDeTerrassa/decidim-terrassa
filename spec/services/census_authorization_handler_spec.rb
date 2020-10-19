@@ -21,7 +21,7 @@ describe CensusAuthorizationHandler do
   end
 
   before do
-    handler.user = create(:user)
+    handler.user = create(:user, nickname: "test_user")
   end
 
   context "with a valid response" do
