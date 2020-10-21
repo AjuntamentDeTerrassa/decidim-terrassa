@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 
 ruby '2.6.5'
 
-DECIDIM_VERSION = '~> 0.20.0'
+DECIDIM_VERSION = '~> 0.22.0'
 
 gem 'decidim', DECIDIM_VERSION
 gem 'decidim-consultations', DECIDIM_VERSION
@@ -18,7 +18,7 @@ gem 'virtus-multiparams'
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
 
-gem 'geocoder', '~> 1.5.2'
+gem 'geocoder', '~> 1.6.1'
 
 gem 'faker'
 gem 'puma'
