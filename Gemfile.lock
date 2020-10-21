@@ -203,7 +203,7 @@ GEM
       file_validators (~> 2.1)
       foundation-rails (~> 6.6, < 6.7)
       foundation_rails_helper (~> 3.0)
-      geocoder (>= 1.6.1)
+      geocoder (>= 1.5)
       hashdiff (>= 0.4.0, < 2.0.0)
       invisible_captcha (~> 0.12)
       jquery-rails (~> 4.3)
