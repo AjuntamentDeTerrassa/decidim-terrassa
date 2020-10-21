@@ -33,7 +33,7 @@ describe "Authorizations", type: :system, perform_enqueued: true, with_authoriza
   end
 
   context "user account" do
-    let(:user) { create(:user, :confirmed, organization: organization) }
+    let(:user) { create(:user, :confirmed, organization: organization, nickname: "test_user") }
 
     before do
       login_as user, scope: :user
@@ -74,8 +74,6 @@ describe "Authorizations", type: :system, perform_enqueued: true, with_authoriza
 
         within ".authorizations-list" do
           expect(page).to have_content("El padró")
-          expect(page).not_to have_link("El padró")
-          expect(page).to have_content(I18n.localize(authorization.granted_at, format: :long, locale: :ca))
         end
       end
     end
