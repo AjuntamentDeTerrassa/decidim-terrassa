@@ -33,7 +33,7 @@ describe "Authorizations", type: :system, perform_enqueued: true, with_authoriza
   end
 
   context "user account" do
-    let(:user) { create(:user, :confirmed, organization: organization, nickname: "test_user") }
+    let(:user) { create(:user, :confirmed, organization: organization, nickname: "Test") }
 
     before do
       login_as user, scope: :user
@@ -66,7 +66,9 @@ describe "Authorizations", type: :system, perform_enqueued: true, with_authoriza
       let!(:authorization) do
         create(:authorization,
                name: CensusAuthorizationHandler.handler_name,
-               user: user)
+               user: user,
+               granted_at: Time.now
+        )
       end
 
       it "shows the authorization at their account" do
@@ -74,6 +76,8 @@ describe "Authorizations", type: :system, perform_enqueued: true, with_authoriza
 
         within ".authorizations-list" do
           expect(page).to have_content("El padró")
+          expect(page).to have_no_link("El padró")
+          expect(page).to have_content(I18n.l(authorization.granted_at, format: :long))
         end
       end
     end
