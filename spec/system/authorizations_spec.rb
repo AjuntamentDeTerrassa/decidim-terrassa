@@ -77,7 +77,8 @@ describe "Authorizations", type: :system, perform_enqueued: true, with_authoriza
         within ".authorizations-list" do
           expect(page).to have_content("El padró")
           expect(page).to have_no_link("El padró")
-          expect(page).to have_content(I18n.localize(authorization.granted_at.utc, format: :long, locale: :ca))        end
+          expect(page).to have_content(I18n.localize(authorization.granted_at.utc, format: :long, locale: :ca))
+        end
       end
     end
   end
