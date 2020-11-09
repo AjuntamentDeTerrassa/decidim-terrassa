@@ -20,6 +20,8 @@ gem 'wkhtmltopdf-binary'
 
 gem 'geocoder', '~> 1.6.1'
 
+gem "decidim-calendar", git: "https://github.com/alabs/decidim-module-calendar.git"
+
 gem 'faker'
 gem 'puma'
 gem 'sprockets', '~> 3.7.2'
