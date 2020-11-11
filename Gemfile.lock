@@ -1,4 +1,13 @@
 GIT
+  remote: https://github.com/AjuntamentDeTerrassa/decidim-module-calendar
+  revision: 0e680751cf07182fadb9433c478569e8d6018473
+  branch: master
+  specs:
+    decidim-calendar (0.19.0)
+      decidim-admin (>= 0.19.0)
+      decidim-core (>= 0.19.0)
+
+GIT
   remote: https://github.com/MarsBased/decidim-file_authorization_handler.git
   revision: f01aaa7fcc9518228f7f079ca06c58aada8230c2
   branch: master
@@ -9,12 +18,12 @@ GIT
       rails (>= 5.2)
 
 GIT
-  remote: https://github.com/alabs/decidim-module-calendar.git
-  revision: 929739b916c624b471a326569ac53802c79e6aaf
+  remote: https://github.com/mainio/decidim-module-term_customizer.git
+  revision: e7d442129fcce6f79b227f7372d24187490fc0e1
   specs:
-    decidim-calendar (0.19.0)
-      decidim-admin (>= 0.19.0)
-      decidim-core (>= 0.19.0)
+    decidim-term_customizer (0.22.0)
+      decidim-admin (~> 0.22.0)
+      decidim-core (~> 0.22.0)
 
 GEM
   remote: https://rubygems.org/
@@ -831,6 +840,7 @@ DEPENDENCIES
   decidim-dev (~> 0.22.0)
   decidim-file_authorization_handler!
   decidim-initiatives (~> 0.22.0)
+  decidim-term_customizer!
   faker
   fog-aws
   geocoder (~> 1.6.1)

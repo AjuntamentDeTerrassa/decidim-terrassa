@@ -38,3 +38,5 @@ Decidim::Verifications.register_workflow(:census_authorization_handler) do |auth
     options.attribute :district, type: :string, required: false
   end
 end
+
+Dir[Rails.root.join('app/lib/decidim/**/*.rb')].each { |f| require f }

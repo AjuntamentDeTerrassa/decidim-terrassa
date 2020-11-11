@@ -12,15 +12,17 @@ gem 'decidim-file_authorization_handler',
     git: 'https://github.com/MarsBased/decidim-file_authorization_handler.git',
     branch: 'master'
 gem 'decidim-initiatives', DECIDIM_VERSION
-# gem 'decidim-term_customizer',
-#   git: 'https://github.com/mainio/decidim-module-term_customizer.git'
+gem 'decidim-term_customizer',
+    git: 'https://github.com/mainio/decidim-module-term_customizer.git'
 gem 'virtus-multiparams'
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
 
 gem 'geocoder', '~> 1.6.1'
 
-gem "decidim-calendar", git: "https://github.com/alabs/decidim-module-calendar.git"
+gem "decidim-calendar",
+    git: 'https://github.com/AjuntamentDeTerrassa/decidim-module-calendar',
+    branch: 'master'
 
 gem 'faker'
 gem 'puma'
