@@ -46,6 +46,12 @@ Rails.application.configure do
   # when problems arise.
   config.log_level = :debug
 
+  # Silence the cache store, the decidim-term_customizer module doesn't work otherwise
+  # source: https://github.com/mainio/decidim-module-term_customizer/issues/38
+  config.after_initialize do
+    Rails.cache.logger.level = Logger::INFO
+  end
+
   # Prepend all log lines with the following tags.
   config.log_tags = [ :request_id ]
 
