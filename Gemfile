@@ -20,10 +20,6 @@ gem 'wkhtmltopdf-binary'
 
 gem 'geocoder', '~> 1.6.1'
 
-gem "decidim-calendar",
-    git: 'https://github.com/AjuntamentDeTerrassa/decidim-module-calendar',
-    branch: 'master'
-
 gem 'faker'
 gem 'puma'
 gem 'sprockets', '~> 3.7.2'
