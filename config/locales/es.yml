@@ -30,6 +30,8 @@ es:
         name: El padrón
         explanation: Verifícate con el padrón
         fields:
+          age: Edad mínima
+          max_age: Edad máxima
           document_number: Número de documento
           document_type: Tipo de documento
           postal_code: Código postal
