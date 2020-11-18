@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 ruby '2.6.5'
 
-DECIDIM_VERSION = "~> 0.20.0"
+DECIDIM_VERSION = "~> 0.22.0"
 
 gem "decidim", DECIDIM_VERSION
 gem "virtus-multiparams"
@@ -12,7 +12,7 @@ gem 'uglifier'
 gem 'faker'
 gem "sprockets", "~> 3.7.2"
 
-gem "geocoder", "~> 1.5.2"
+gem "geocoder", "~> 1.6.1"
 
 group :development, :test do
   gem 'byebug', platform: :mri
