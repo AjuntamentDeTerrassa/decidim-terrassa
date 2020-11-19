@@ -32,9 +32,12 @@ class CensusAuthorizationHandler < Decidim::AuthorizationHandler
   end
 
   def metadata
-    super.merge(district: district) if district.present?
+    { 
+      birthdate: sanitized_date_of_birth, 
+      district: (district if district.present?)
+    }.compact 
   end
-
+  
   private
 
   def district

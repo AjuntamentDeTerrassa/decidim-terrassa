@@ -29,6 +29,8 @@ ca:
       census_authorization_handler:
         explanation: Verifica't amb el padró
         fields:
+          age: Edat mínima
+          max_age: Edat màxima
           document_number: Número de document
           document_type: Tipus de document
           postal_code: Codi postal

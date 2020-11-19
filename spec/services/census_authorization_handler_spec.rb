@@ -95,7 +95,7 @@ describe CensusAuthorizationHandler do
 
     describe "district" do
       it "parses it from the response" do
-        expect(subject.metadata).to eq(district: "4")
+        expect(subject.metadata).to eq({:birthdate=>"17-09-1987", :district=>"4"})
       end
     end
 

@@ -34,8 +34,11 @@ end
 
 Decidim::Verifications.register_workflow(:census_authorization_handler) do |auth|
   auth.form = "CensusAuthorizationHandler"
+  auth.action_authorizer = 'AgeAuthorizationHandler'
   auth.options do |options|
     options.attribute :district, type: :string, required: false
+    options.attribute :age, type: :string, required: false
+    options.attribute :max_age, type: :string, required: false
   end
 end
 
