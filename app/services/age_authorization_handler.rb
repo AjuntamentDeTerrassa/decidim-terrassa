@@ -1,4 +1,4 @@
-
+# frozen_string_literal: true
 class AgeAuthorizationHandler < Decidim::Verifications::DefaultActionAuthorizer
   def missing_fields
     @missing_fields ||= (valid_metadata? ? [] : [:birthdate])
