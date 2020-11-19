@@ -5,6 +5,8 @@ ruby '2.6.5'
 DECIDIM_VERSION = "~> 0.22.0"
 
 gem "decidim", DECIDIM_VERSION
+gem 'decidim-term_customizer',
+    git: 'https://github.com/mainio/decidim-module-term_customizer.git'
 gem "virtus-multiparams"
 
 gem 'puma'
