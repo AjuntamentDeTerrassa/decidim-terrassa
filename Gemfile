@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 ruby '2.6.5'
 
-DECIDIM_VERSION = "~> 0.22.0"
+DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", tag: "release/0.22-stable" }
 
 gem "decidim", DECIDIM_VERSION
 gem 'decidim-term_customizer',
