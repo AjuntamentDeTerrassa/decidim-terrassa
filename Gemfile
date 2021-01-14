@@ -1,12 +1,11 @@
 source "https://rubygems.org"
 
-ruby '2.6.5'
-
-DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", tag: "release/0.22-stable" }
+ruby RUBY_VERSION
+DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", tag: "release/0.23-stable" }
 
 gem "decidim", DECIDIM_VERSION
 gem 'decidim-term_customizer',
-    git: 'https://github.com/mainio/decidim-module-term_customizer.git'
+    git: 'https://github.com/EntraInAzione/decidim-module-term_customizer.git'
 gem "virtus-multiparams"
 
 gem 'puma'
