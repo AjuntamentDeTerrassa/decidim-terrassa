@@ -2,9 +2,9 @@
 
 source 'https://rubygems.org'
 
-ruby '2.6.5'
+ruby RUBY_VERSION
 
-DECIDIM_VERSION = '~> 0.22.0'
+DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", tag: "release/0.23-stable" }
 
 gem 'decidim', DECIDIM_VERSION
 gem 'decidim-consultations', DECIDIM_VERSION
@@ -13,7 +13,7 @@ gem 'decidim-file_authorization_handler',
     branch: 'master'
 gem 'decidim-initiatives', DECIDIM_VERSION
 gem 'decidim-term_customizer',
-    git: 'https://github.com/mainio/decidim-module-term_customizer.git'
+    git: 'https://github.com/EntraInAzione/decidim-module-term_customizer.git'
 gem 'virtus-multiparams'
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
