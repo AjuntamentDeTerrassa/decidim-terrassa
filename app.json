@@ -8,6 +8,7 @@
     "memcachedcloud:30",
     "sendgrid:starter"
   ],
+  "stack": "heroku-20",
   "scripts": {
     "postdeploy":"DISABLE_DATABASE_ENVIRONMENT_CHECK=1 rake db:schema:load db:migrate db:seed"
   },
