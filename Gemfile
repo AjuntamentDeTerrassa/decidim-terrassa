@@ -20,6 +20,7 @@ gem 'wkhtmltopdf-binary'
 
 gem 'geocoder', '~> 1.6.1'
 
+gem 'faker'
 gem 'puma'
 gem 'sprockets', '~> 3.7.2'
 gem 'uglifier'
