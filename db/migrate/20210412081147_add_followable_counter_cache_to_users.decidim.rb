@@ -9,6 +9,7 @@ class AddFollowableCounterCacheToUsers < ActiveRecord::Migration[5.2]
       dir.up do
         Decidim::User.reset_column_information
         Decidim::User.find_each do |record|
+          p record.id
           record.class.reset_counters(record.id, :follows)
         end
       end
