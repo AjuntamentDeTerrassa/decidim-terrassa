@@ -401,7 +401,7 @@ GEM
     eventmachine (1.2.7)
     eventmachine_httpserver (0.2.1)
     excon (0.81.0)
-    execjs (2.8.0)
+    execjs (2.7.0)
     factory_bot (4.11.1)
       activesupport (>= 3.0.0)
     factory_bot_rails (4.11.1)
@@ -860,6 +860,7 @@ DEPENDENCIES
   decidim!
   decidim-dev!
   decidim-term_customizer!
+  execjs (~> 2.7.0)
   faker
   fog-aws
   geocoder (~> 1.6.1)
