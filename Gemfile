@@ -23,6 +23,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'letter_opener_web'
   gem 'listen'
   gem 'spring'
   gem 'spring-watcher-listen'
