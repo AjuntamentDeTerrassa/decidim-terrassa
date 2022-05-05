@@ -3,7 +3,7 @@
 
 class RemoveFollowingUsersCountFromUsers < ActiveRecord::Migration[5.2]
   def up
-    remove_column :decidim_users, :following_users_count
+    #remove_column :decidim_users, :following_users_count
   end
 
   def down
