@@ -4,7 +4,7 @@ ruby RUBY_VERSION
 DECIDIM_VERSION = "0.25.2"
 
 gem "decidim", DECIDIM_VERSION
-gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer.git", ref: "e98599c995765d5a3d1f594c3fbbd599c72cfc72"
+gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer.git", ref: "437042198ed04cdd5582b29d5df83b032ecc518f"
 gem "decidim-decidim_awesome", "~> 0.8"
 gem "virtus-multiparams"
 
