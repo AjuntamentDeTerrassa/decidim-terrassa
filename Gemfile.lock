@@ -768,6 +768,8 @@ GEM
       coercible (~> 1.0)
       descendants_tracker (~> 0.0, >= 0.0.3)
       equalizer (~> 0.0, >= 0.0.9)
+    virtus-multiparams (0.1.1)
+      virtus (~> 1.0)
     w3c_rspec_validators (0.3.0)
       rails
       rspec
@@ -814,7 +816,6 @@ DEPENDENCIES
   execjs (~> 2.7.0)
   faker
   fog-aws
-  geocoder (~> 1.6.1)
   launchy
   letter_opener_web
   listen
@@ -829,9 +830,9 @@ DEPENDENCIES
   spring
   spring-commands-rspec
   spring-watcher-listen
-  sprockets (~> 3.7.2)
   tzinfo-data
   uglifier
+  virtus-multiparams
 
 RUBY VERSION
    ruby 2.7.3p183

@@ -10,11 +10,9 @@ gem "decidim-decidim_awesome", "~> 0.8"
 gem 'puma'
 gem 'uglifier'
 gem 'faker'
-gem "sprockets", "~> 3.7.2"
-
-gem "geocoder", "~> 1.6.1"
 
 gem "execjs", "~> 2.7.0"
+gem "virtus-multiparams"
 
 group :development, :test do
   gem 'byebug', platform: :mri
