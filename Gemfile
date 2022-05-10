@@ -1,12 +1,11 @@
 source "https://rubygems.org"
 
 ruby RUBY_VERSION
-DECIDIM_VERSION = "0.25.2"
+DECIDIM_VERSION = "0.26.1"
 
 gem "decidim", DECIDIM_VERSION
-gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer.git", ref: "437042198ed04cdd5582b29d5df83b032ecc518f"
+gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer.git", branch: "develop"
 gem "decidim-decidim_awesome", "~> 0.8"
-gem "virtus-multiparams"
 
 gem 'puma'
 gem 'uglifier'
