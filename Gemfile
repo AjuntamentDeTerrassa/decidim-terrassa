@@ -1,11 +1,11 @@
 source "https://rubygems.org"
 
 ruby RUBY_VERSION
-DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", tag: "release/0.24-stable" }
+DECIDIM_VERSION = "0.25.2"
 
 gem "decidim", DECIDIM_VERSION
-gem 'decidim-term_customizer',
-    git: 'https://github.com/mainio/decidim-module-term_customizer.git'
+gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer.git", ref: "437042198ed04cdd5582b29d5df83b032ecc518f"
+gem "decidim-decidim_awesome", "~> 0.8"
 gem "virtus-multiparams"
 
 gem 'puma'
@@ -34,7 +34,7 @@ end
 group :production do
   gem "rails_12factor"
   gem "fog-aws"
-  gem 'dalli'
+  gem "dalli"
   gem 'sendgrid-ruby'
   gem 'newrelic_rpm'
   gem "lograge"
