@@ -25,6 +25,9 @@
 # Ignore public uploads
 public/uploads
 
+.rspec-failures
+.rbenv-vars
+=======
 .ruby-gemset
 
 .env
