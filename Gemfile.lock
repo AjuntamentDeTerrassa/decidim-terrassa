@@ -1,4 +1,12 @@
 GIT
+  remote: https://github.com/luizsanches/decidim-module-calendar
+  revision: ab530a86f4c30e49042a121602cd96c72abb959e
+  specs:
+    decidim-calendar (0.21.0)
+      decidim-admin (>= 0.25.0)
+      decidim-core (>= 0.25.0)
+
+GIT
   remote: https://github.com/mainio/decidim-module-term_customizer.git
   revision: 6b5e50d9ae4cf16897cf193da4a55cd07d3fce81
   branch: develop
@@ -810,6 +818,7 @@ DEPENDENCIES
   dalli
   database_cleaner
   decidim (= 0.26.1)
+  decidim-calendar!
   decidim-decidim_awesome (~> 0.8)
   decidim-dev (= 0.26.1)
   decidim-term_customizer!

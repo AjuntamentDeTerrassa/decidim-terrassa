@@ -5,6 +5,7 @@ DECIDIM_VERSION = "0.26.1"
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer.git", branch: "develop"
+gem "decidim-calendar", git: "https://github.com/luizsanches/decidim-module-calendar"
 gem "decidim-decidim_awesome", "~> 0.8"
 
 gem 'puma'
