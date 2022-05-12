@@ -25,6 +25,8 @@ ca:
         month: "Mes"
         year: "Any"
   decidim:
+    accessibility:
+      front_page_link: Anar a la pàgina principal
     authorization_handlers:
       census_authorization_handler:
         explanation: Verifica't amb el padró
