@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_10_090753) do
+ActiveRecord::Schema.define(version: 2022_05_12_105422) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
@@ -552,6 +552,18 @@ ActiveRecord::Schema.define(version: 2022_05_10_090753) do
     t.index ["decidim_user_group_id"], name: "index_decidim_endorsements_on_decidim_user_group_id"
     t.index ["resource_type", "resource_id", "decidim_author_type", "decidim_author_id", "decidim_user_group_id"], name: "idx_endorsements_rsrcs_and_authors", unique: true
     t.index ["resource_type", "resource_id"], name: "index_decidim_endorsements_on_resource_type_and_resource_id"
+  end
+
+  create_table "decidim_event_calendar_external_events", force: :cascade do |t|
+    t.jsonb "title", null: false
+    t.datetime "start_at", null: false
+    t.datetime "end_at", null: false
+    t.string "url"
+    t.integer "decidim_author_id", null: false
+    t.string "decidim_author_type"
+    t.integer "decidim_organization_id", null: false
+    t.index ["decidim_author_id"], name: "decidim_calendar_external_event_author"
+    t.index ["decidim_organization_id"], name: "decidim_calendar_external_event_organization"
   end
 
   create_table "decidim_follows", force: :cascade do |t|
