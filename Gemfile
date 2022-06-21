@@ -1,21 +1,19 @@
 source "https://rubygems.org"
 
 ruby RUBY_VERSION
-DECIDIM_VERSION = "0.25.2"
+DECIDIM_VERSION = "0.26.2"
 
 gem "decidim", DECIDIM_VERSION
-gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer.git", ref: "437042198ed04cdd5582b29d5df83b032ecc518f"
+gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer.git", branch: "develop"
+gem "decidim-calendar", git: "https://github.com/PopulateTools/decidim-module-calendar", branch: "undo_participatory_space"
 gem "decidim-decidim_awesome", "~> 0.8"
-gem "virtus-multiparams"
 
 gem 'puma'
 gem 'uglifier'
 gem 'faker'
-gem "sprockets", "~> 3.7.2"
-
-gem "geocoder", "~> 1.6.1"
 
 gem "execjs", "~> 2.7.0"
+gem "virtus-multiparams"
 
 group :development, :test do
   gem 'byebug', platform: :mri

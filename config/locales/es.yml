@@ -25,6 +25,8 @@ es:
         month: "Mes"
         year: "Año"
   decidim:
+    accessibility:
+      front_page_link: Ir a la página principal
     authorization_handlers:
       census_authorization_handler:
         name: El padrón
