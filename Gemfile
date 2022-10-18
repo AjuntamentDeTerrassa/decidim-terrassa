@@ -29,7 +29,7 @@ group :development do
   gem 'launchy'
 end
 
-group :production do
+group :production, :straging do
   gem "rails_12factor"
   gem "fog-aws"
   gem "aws-sdk-s3", require: false

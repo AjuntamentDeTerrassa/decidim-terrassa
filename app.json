@@ -40,5 +40,20 @@
       "description": "A secret used by Rails to identify sessions",
       "generator": "secret"
     }
+  },
+  "cron": [
+    {
+      "command": "bundle exec rake decidim:open_data:export",
+      "schedule": "0 1 * * *"
+    },
+    {
+      "command": "bundle exec rake decidim:metrics:all",
+      "schedule": "0 3 * * *"
+    }
+  ],
+  "scripts": {
+    "dokku": {
+      "postdeploy": "bundle exec rake db:migrate"
+    }
   }
 }
