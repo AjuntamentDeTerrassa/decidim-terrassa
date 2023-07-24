@@ -83,6 +83,7 @@ Rails.application.configure do
     :password       => Rails.application.secrets.smtp_password,
     :domain         => Rails.application.secrets.smtp_domain,
     :enable_starttls_auto => Rails.application.secrets.smtp_starttls_auto,
+    :ca_file => "/etc/ssl/certs/ca-certificates.crt",
     :openssl_verify_mode => 'none'
   }
 
