@@ -38,7 +38,7 @@ group :production, :straging do
   gem 'newrelic_rpm'
   gem "lograge"
   gem "sentry-raven"
-  gem "sidekiq"
+  gem "sidekiq", "~> 6.5.6"
 end
 
 group :test do
