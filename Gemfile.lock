@@ -1,13 +1,4 @@
 GIT
-  remote: https://github.com/PopulateTools/decidim-module-calendar
-  revision: af04695be6391463ed65195e2ccc9b5ec7344232
-  branch: undo_participatory_space
-  specs:
-    decidim-calendar (0.21.0)
-      decidim-admin (>= 0.25.0)
-      decidim-core (>= 0.25.0)
-
-GIT
   remote: https://github.com/decidim-ice/decidim-module-decidim_awesome.git
   revision: 058af7db47737e3ca108ac8e08efd5ec55d67a44
   branch: release/0.27-stable
@@ -17,6 +8,15 @@ GIT
       decidim-core (>= 0.26.0, < 0.28)
       deface (>= 1.5)
       sassc (~> 2.3)
+
+GIT
+  remote: https://github.com/luizsanches/decidim-module-calendar
+  revision: 94dc531d2616f2fadd5abdd82b6faf1e47053de0
+  branch: main
+  specs:
+    decidim-calendar (0.23.0)
+      decidim-admin (>= 0.27.0)
+      decidim-core (>= 0.27.0)
 
 GEM
   remote: https://rubygems.org/
