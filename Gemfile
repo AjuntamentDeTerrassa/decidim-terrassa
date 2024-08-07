@@ -4,7 +4,7 @@ ruby RUBY_VERSION
 DECIDIM_VERSION = "0.27.8"
 
 gem "decidim", DECIDIM_VERSION
-# gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer.git", branch: "release/0.27-stable"
+gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer.git", branch: "release/0.27-stable"
 gem "decidim-calendar", git: "https://github.com/luizsanches/decidim-module-calendar", branch: "main"
 gem "decidim-decidim_awesome", git: "https://github.com/decidim-ice/decidim-module-decidim_awesome.git", branch: "release/0.27-stable"
 

@@ -18,6 +18,15 @@ GIT
       decidim-admin (>= 0.27.0)
       decidim-core (>= 0.27.0)
 
+GIT
+  remote: https://github.com/mainio/decidim-module-term_customizer.git
+  revision: abbf0c69e1bcaafebc5aa4f8da22fdb64ce62149
+  branch: release/0.27-stable
+  specs:
+    decidim-term_customizer (0.27.0)
+      decidim-admin (~> 0.27.0)
+      decidim-core (~> 0.27.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -896,6 +905,7 @@ DEPENDENCIES
   decidim-calendar!
   decidim-decidim_awesome!
   decidim-dev (= 0.27.8)
+  decidim-term_customizer!
   execjs (~> 2.9.0)
   faker
   fog-aws
