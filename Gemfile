@@ -13,7 +13,6 @@ gem 'uglifier'
 gem 'faker'
 
 gem "execjs", "~> 2.9.0"
-gem "virtus-multiparams"
 
 group :development, :test do
   gem 'byebug', platform: :mri

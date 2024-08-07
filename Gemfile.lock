@@ -850,8 +850,6 @@ GEM
       coercible (~> 1.0)
       descendants_tracker (~> 0.0, >= 0.0.3)
       equalizer (~> 0.0, >= 0.0.9)
-    virtus-multiparams (0.1.1)
-      virtus (~> 1.0)
     w3c_rspec_validators (0.3.0)
       rails
       rspec
@@ -917,7 +915,6 @@ DEPENDENCIES
   spring-watcher-listen
   tzinfo-data
   uglifier
-  virtus-multiparams
 
 RUBY VERSION
    ruby 3.0.6p216
