@@ -399,6 +399,17 @@ Decidim.configure do |config|
     class_identifier = resource.class.name.demodulize[0..3].upcase
     "#{class_identifier}-#{resource.id}"
   end
+
+  config.content_security_policies_extra = {
+    "default-src" => %w('self' 'unsafe-inline'),
+    "script-src" => %w('self' 'unsafe-inline' 'unsafe-eval' *.terrassa.cat),
+    "style-src" => %w('self' 'unsafe-inline'),
+    "img-src" => %w('self' *.hereapi.com data: *.amazonaws.com terrassa.cat *.terrassa.cat),
+    "font-src" => %w('self'),
+    "connect-src" => %w('self' *.hereapi.com *.jsdelivr.net *.amazonaws.com),
+    "frame-src" => %w('self' *.youtube.com www.youtube-nocookie.com player.vimeo.com *.google.com *.airtable.com),
+    "media-src" => %w('self')
+  }
 end
 
 Decidim::Verifications.register_workflow(:census_authorization_handler) do |auth|
