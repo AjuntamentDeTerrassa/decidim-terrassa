@@ -426,3 +426,7 @@ Decidim.menu :menu do |menu|
     active: :inclusive,
     if: Decidim::ParticipatoryProcess.where(decidim_participatory_process_group_id: 6).published.public_spaces.any?
 end
+
+# Disable SSL checking of the SMTP
+OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
+

@@ -29,7 +29,7 @@ group :development do
   gem 'launchy'
 end
 
-group :production do
+group :production, :straging do
   gem "rails_12factor"
   gem "fog-aws"
   gem "aws-sdk-s3", require: false
@@ -38,7 +38,7 @@ group :production do
   gem 'newrelic_rpm'
   gem "lograge"
   gem "sentry-raven"
-  gem "sidekiq"
+  gem "sidekiq", "~> 6.5.6"
 end
 
 group :test do
