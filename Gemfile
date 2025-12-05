@@ -1,12 +1,12 @@
 source "https://rubygems.org"
 
 ruby RUBY_VERSION
-DECIDIM_VERSION = "0.28.0"
+DECIDIM_VERSION = "0.29.0"
 
 gem "decidim", DECIDIM_VERSION
-gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer.git", branch: "main"
+# gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer.git", branch: "main"
 # gem "decidim-calendar", git: "https://github.com/decidim-ice/decidim-module-calendar", branch: "release/0.28-stable"
-gem "decidim-decidim_awesome", "~> 0.11.2"
+# gem "decidim-decidim_awesome", "~> 0.11.2"
 gem "decidim-templates", DECIDIM_VERSION
 
 gem 'puma'
