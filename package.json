@@ -2,10 +2,10 @@
   "name": "app",
   "private": true,
   "dependencies": {
-    "@decidim/browserslist-config": "^0.28.6",
-    "@decidim/core": "^0.28.6",
+    "@decidim/browserslist-config": "^0.29.7",
+    "@decidim/core": "^0.29.7",
     "@decidim/elections": "^0.28.6",
-    "@decidim/webpacker": "^0.28.6",
+    "@decidim/webpacker": "^0.29.7",
     "@fullcalendar/core": "^5.11.5",
     "@fullcalendar/daygrid": "^5.11.5",
     "@fullcalendar/interaction": "^5.11.5",
