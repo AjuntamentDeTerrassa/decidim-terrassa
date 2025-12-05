@@ -41,7 +41,7 @@
     "extends @decidim/browserslist-config"
   ],
   "engines": {
-    "node": "22.14.0",
+    "node": "22.x",
     "npm": ">=9.6.7"
   }
 }
