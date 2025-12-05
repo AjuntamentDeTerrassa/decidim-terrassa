@@ -7,15 +7,6 @@ GIT
       decidim-admin (~> 0.29.0)
       decidim-core (~> 0.29.0)
 
-GIT
-  remote: https://github.com/decidim-ice/decidim-module-calendar
-  revision: 2a577525500c5580be9867d65b384b9f88bc5ef5
-  branch: release/0.29-stable
-  specs:
-    decidim-calendar (0.29.0)
-      decidim-admin (>= 0.29.2, < 0.30)
-      decidim-core (>= 0.29.2, < 0.30)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -899,7 +890,6 @@ DEPENDENCIES
   dalli
   database_cleaner
   decidim (= 0.29.7)
-  decidim-calendar!
   decidim-decidim_awesome (~> 0.12.6)
   decidim-dev (= 0.29.7)
   decidim-templates (= 0.29.7)
