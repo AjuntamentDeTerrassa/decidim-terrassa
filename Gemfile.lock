@@ -1,3 +1,21 @@
+GIT
+  remote: https://github.com/PopulateTools/decidim-module-term_customizer
+  revision: b0b6d191db21134a1c3634a72ff33441fbfddd01
+  branch: upgrade_0.29
+  specs:
+    decidim-term_customizer (0.29.0)
+      decidim-admin (~> 0.29.0)
+      decidim-core (~> 0.29.0)
+
+GIT
+  remote: https://github.com/decidim-ice/decidim-module-calendar
+  revision: 2a577525500c5580be9867d65b384b9f88bc5ef5
+  branch: release/0.29-stable
+  specs:
+    decidim-calendar (0.29.0)
+      decidim-admin (>= 0.29.2, < 0.30)
+      decidim-core (>= 0.29.2, < 0.30)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -47,6 +65,8 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.1, >= 1.2.0)
+    active_hashcash (0.4.0)
+      rails (>= 5.2.0)
     active_link_to (1.0.5)
       actionpack
       addressable
@@ -265,6 +285,12 @@ GEM
     decidim-debates (0.29.7)
       decidim-comments (= 0.29.7)
       decidim-core (= 0.29.7)
+    decidim-decidim_awesome (0.12.6)
+      active_hashcash (~> 0.4.0)
+      decidim-admin (>= 0.29.1, < 0.30)
+      decidim-core (>= 0.29.1, < 0.30)
+      deface (>= 1.5)
+      sassc (~> 2.3)
     decidim-dev (0.29.7)
       bullet (~> 7.1.6)
       byebug (~> 11.0)
@@ -341,6 +367,12 @@ GEM
     declarative-builder (0.2.0)
       trailblazer-option (~> 0.1.0)
     declarative-option (0.1.0)
+    deface (1.9.0)
+      actionview (>= 5.2)
+      nokogiri (>= 1.6)
+      polyglot
+      railties (>= 5.2)
+      rainbow (>= 2.1.0)
     devise (4.9.4)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -601,6 +633,7 @@ GEM
     pg_search (2.3.7)
       activerecord (>= 6.1)
       activesupport (>= 6.1)
+    polyglot (0.3.5)
     premailer (1.27.0)
       addressable
       css_parser (>= 1.19.0)
@@ -764,6 +797,8 @@ GEM
       rubyzip (>= 1.3.0)
     ruby_http_client (3.5.5)
     rubyzip (2.3.2)
+    sassc (2.4.0)
+      ffi (~> 1.9)
     securerandom (0.4.1)
     selenium-webdriver (4.38.0)
       base64 (~> 0.2)
@@ -864,8 +899,11 @@ DEPENDENCIES
   dalli
   database_cleaner
   decidim (= 0.29.7)
+  decidim-calendar!
+  decidim-decidim_awesome (~> 0.12.6)
   decidim-dev (= 0.29.7)
   decidim-templates (= 0.29.7)
+  decidim-term_customizer!
   execjs (~> 2.9.0)
   faker
   fog-aws

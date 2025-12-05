@@ -4,9 +4,9 @@ ruby RUBY_VERSION
 DECIDIM_VERSION = "0.29.7"
 
 gem "decidim", DECIDIM_VERSION
-# gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer.git", branch: "main"
-# gem "decidim-calendar", git: "https://github.com/decidim-ice/decidim-module-calendar", branch: "release/0.28-stable"
-# gem "decidim-decidim_awesome", "~> 0.11.2"
+gem "decidim-term_customizer", git: "https://github.com/PopulateTools/decidim-module-term_customizer", branch: "upgrade_0.29"
+gem "decidim-calendar", git: "https://github.com/decidim-ice/decidim-module-calendar", branch: "release/0.29-stable"
+gem "decidim-decidim_awesome", "~> 0.12.6"
 gem "decidim-templates", DECIDIM_VERSION
 
 gem 'puma'
