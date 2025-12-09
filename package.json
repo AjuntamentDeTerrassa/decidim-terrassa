@@ -13,6 +13,7 @@
     "@fullcalendar/timegrid": "^5.11.5",
     "@rails/actioncable": "^6.1.710",
     "@rails/webpacker": "^6.0.0-rc.6",
+    "@tarekraafat/autocomplete.js": "10.2.7",
     "codemirror": "^5.65.19",
     "form-storage": "^1.3.5",
     "formBuilder": "^3.19.13",
@@ -32,7 +33,6 @@
     "@decidim/eslint-config": "^0.29.7",
     "@decidim/prettier-config": "^0.29.7",
     "@decidim/stylelint-config": "^0.29.7",
-    "@tarekraafat/autocomplete.js": "^10.2.7",
     "postcss-scss": "^4.0.9",
     "sass-embedded": "~1.57.1",
     "webpack-dev-server": "^4.8.0"
