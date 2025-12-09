@@ -40,9 +40,7 @@
   "browserslist": [
     "extends @decidim/browserslist-config"
   ],
-  "engines": {
-    "node": "22.x",
-    "npm": ">=9.6.7",
-    "yarn": ">=1 <4"
+  "scripts": {
+    "postinstall": "command -v yarn >/dev/null 2>&1 || npm install -g yarn || echo 'Yarn installation failed, continuing...'"
   }
 }
