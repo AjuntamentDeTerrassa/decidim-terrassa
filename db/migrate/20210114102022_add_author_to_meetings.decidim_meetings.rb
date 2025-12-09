@@ -1,6 +1,7 @@
 # frozen_string_literal: true
-# This migration comes from decidim_meetings (originally 20200526110940)
 
+# This migration comes from decidim_meetings (originally 20200526110940)
+# This file has been modified by `decidim upgrade:migrations` task on 2025-12-09 18:57:42 UTC
 class AddAuthorToMeetings < ActiveRecord::Migration[5.2]
   class Meeting < ApplicationRecord
     self.table_name = :decidim_meetings_meetings
@@ -16,12 +17,11 @@ class AddAuthorToMeetings < ActiveRecord::Migration[5.2]
       if meeting.organizer_id.present?
         meeting.decidim_author_id = meeting.organizer_id
         meeting.decidim_author_type = "Decidim::UserBaseEntity"
-        meeting.save!
-      elsif meeting.organization
+      else
         meeting.decidim_author_id = meeting.organization.id
         meeting.decidim_author_type = "Decidim::Organization"
-        meeting.save!
       end
+      meeting.save!
     end
 
     remove_column :decidim_meetings_meetings, :organizer_id

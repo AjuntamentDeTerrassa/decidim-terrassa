@@ -1,4 +1,7 @@
+# frozen_string_literal: true
+
 # This migration comes from decidim (originally 20161010102356)
+# This file has been modified by `decidim upgrade:migrations` task on 2025-12-09 18:57:43 UTC
 class TranslateProcesses < ActiveRecord::Migration[5.0]
   def change
     remove_column :decidim_participatory_processes, :title

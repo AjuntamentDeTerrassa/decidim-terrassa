@@ -1,6 +1,7 @@
 # frozen_string_literal: true
-# This migration comes from decidim (originally 20180724103814)
 
+# This migration comes from decidim (originally 20180724103814)
+# This file has been modified by `decidim upgrade:migrations` task on 2025-12-09 18:57:42 UTC
 class AddContentBlocks < ActiveRecord::Migration[5.2]
   def change
     create_table :decidim_content_blocks do |t|
