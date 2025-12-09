@@ -1,12 +1,12 @@
 # frozen_string_literal: true
-# This migration comes from decidim (originally 20201127114444)
 
+# This migration comes from decidim (originally 20201127114444)
+# This file has been modified by `decidim upgrade:migrations` task on 2025-12-09 18:57:42 UTC
 class EncryptAuthorizationMetadatas < ActiveRecord::Migration[5.2]
   def up
     Decidim::Authorization.all.each do |auth|
       # Re-setting these values will internally convert the hash values to
       # encypted values
-      p auth.id
       auth.update!(
         metadata: auth.metadata,
         verification_metadata: auth.verification_metadata
@@ -17,7 +17,6 @@ class EncryptAuthorizationMetadatas < ActiveRecord::Migration[5.2]
   def down
     Decidim::Authorization.all.each do |auth|
       # rubocop:disable Rails/SkipsModelValidations
-      p auth.id
       auth.update_columns(
         metadata: decrypt_hash(auth.metadata),
         verification_metadata: decrypt_hash(auth.verification_metadata)

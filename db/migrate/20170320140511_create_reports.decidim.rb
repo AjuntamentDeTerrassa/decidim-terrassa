@@ -1,4 +1,7 @@
+# frozen_string_literal: true
+
 # This migration comes from decidim (originally 20170307084957)
+# This file has been modified by `decidim upgrade:migrations` task on 2025-12-09 18:57:42 UTC
 class CreateReports < ActiveRecord::Migration[5.0]
   def change
     create_table :decidim_reports do |t|

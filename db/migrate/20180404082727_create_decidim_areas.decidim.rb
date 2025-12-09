@@ -1,6 +1,7 @@
-# This migration comes from decidim (originally 20180215104945)
 # frozen_string_literal: true
 
+# This migration comes from decidim (originally 20180215104945)
+# This file has been modified by `decidim upgrade:migrations` task on 2025-12-09 18:57:42 UTC
 class CreateDecidimAreas < ActiveRecord::Migration[5.1]
   def change
     create_table :decidim_areas do |t|
