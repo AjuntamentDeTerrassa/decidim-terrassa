@@ -9,8 +9,8 @@ GIT
 
 GIT
   remote: https://github.com/PopulateTools/decidim-module-decidim_awesome.git
-  revision: 44947be93772f71b9aecacd09f17f61c31473038
-  branch: users_autoblock_030
+  revision: 41b290623a8ca5dba2eaf7990f6197023ba7a3f6
+  branch: users_autoblock_030_translations
   specs:
     decidim-decidim_awesome (0.13.2)
       active_hashcash (~> 0.4.0)
