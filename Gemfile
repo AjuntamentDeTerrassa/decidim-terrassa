@@ -6,7 +6,7 @@ DECIDIM_VERSION = "0.30.4"
 gem "decidim", DECIDIM_VERSION
 gem "decidim-term_customizer", git: "https://github.com/Platoniq/decidim-module-term_customizer", branch: "main"
 # gem "decidim-calendar", git: "https://github.com/decidim-ice/decidim-module-calendar", branch: "release/0.29-stable"
-gem "decidim-decidim_awesome", git: "https://github.com/PopulateTools/decidim-module-decidim_awesome.git", branch: "users_autoblock_030"
+gem "decidim-decidim_awesome", git: "https://github.com/PopulateTools/decidim-module-decidim_awesome.git", branch: "users_autoblock_030_translations"
 gem "decidim-templates", DECIDIM_VERSION
 
 gem 'puma'
