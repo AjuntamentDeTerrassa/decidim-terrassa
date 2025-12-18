@@ -44,6 +44,7 @@ def get_blob(space, attachment_attributes)
   blob = nil
   attachment_attributes.each do |attachment_attribute|
     next if blob.present?
+    next unless space.respond_to?(attachment_attribute)
     next unless space.send(attachment_attribute).is_a?(ActiveStorage::Attached)
     next unless space.send(attachment_attribute).attached?
 
