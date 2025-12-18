@@ -14,21 +14,27 @@ end
 def migrate_spaces(spaces_list, scope_name, space_attachment_attributes)
   space_attachment_attributes = [space_attachment_attributes] unless space_attachment_attributes.is_a?(Array)
   spaces_list.each do |space|
+    blob = get_blob(space, space_attachment_attributes)
+
+    if blob.blank?
+      puts "No image found for space #{space.class.name} #{space.id}"
+      next
+    end
+
     hero_content_block = Decidim::ContentBlock.find_by(scope_name:, scoped_resource_id: space.id, manifest_name: "hero")
-    next if hero_content_block.blank?
+    if hero_content_block.blank?
+      Decidim::Admin::ContentBlocks::CreateContentBlock.call(space.organization, "participatory_process_homepage", "hero", space.id)
+      hero_content_block = Decidim::ContentBlock.find_by(scope_name:, scoped_resource_id: space.id, manifest_name: "hero")
+      hero_content_block.update_attribute(:weight, 0)
+      hero_content_block.publish!
+    end
 
     hero_attachment = hero_content_block.attachments.find_by(name: "background_image")
     next if hero_attachment.blank?
     next if hero_attachment.file.attached?
 
-    blob = get_blob(space, space_attachment_attributes)
-
-    if blob.blank?
-      puts "No image found for space #{space.class.name} #{space.id}"
-    else
-      puts "Image migrated in space #{space.class.name} #{space.id}"
-      hero_attachment.file.attach(blob)
-    end
+    puts "Image migrated in space #{space.class.name} #{space.id}"
+    hero_attachment.file.attach(blob)
   rescue ActiveStorage::FileNotFoundError
     puts "Skipped due to errors accessing blob content..."
   end
