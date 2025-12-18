@@ -25,6 +25,8 @@ def migrate_spaces(spaces_list, scope_name, space_attachment_attributes)
     if hero_content_block.blank?
       Decidim::Admin::ContentBlocks::CreateContentBlock.call(space.organization, "participatory_process_homepage", "hero", space.id)
       hero_content_block = Decidim::ContentBlock.find_by(scope_name:, scoped_resource_id: space.id, manifest_name: "hero")
+      next if hero_content_block.blank?
+
       hero_content_block.update_attribute(:weight, 0)
       hero_content_block.publish!
     end
