@@ -2,10 +2,10 @@
   "name": "app",
   "private": true,
   "dependencies": {
-    "@decidim/browserslist-config": "^0.30.4",
-    "@decidim/core": "^0.30.4",
+    "@decidim/browserslist-config": "^0.30.9",
+    "@decidim/core": "^0.30.9",
     "@decidim/elections": "^0.28.6",
-    "@decidim/webpacker": "^0.30.4",
+    "@decidim/webpacker": "^0.30.9",
     "@fullcalendar/core": "^5.11.5",
     "@fullcalendar/daygrid": "^5.11.5",
     "@fullcalendar/interaction": "^5.11.5",
@@ -29,10 +29,10 @@
   },
   "version": "0.1.0",
   "devDependencies": {
-    "@decidim/dev": "^0.30.4",
-    "@decidim/eslint-config": "^0.30.4",
-    "@decidim/prettier-config": "^0.30.4",
-    "@decidim/stylelint-config": "^0.30.4",
+    "@decidim/dev": "^0.30.9",
+    "@decidim/eslint-config": "^0.30.9",
+    "@decidim/prettier-config": "^0.30.9",
+    "@decidim/stylelint-config": "^0.30.9",
     "postcss-scss": "^4.0.9",
     "sass-embedded": "~1.57.1",
     "webpack-dev-server": "^4.8.0"
