@@ -9,7 +9,7 @@ GIT
 
 GIT
   remote: https://github.com/PopulateTools/decidim-module-decidim_awesome.git
-  revision: 2fbfab5bffcfe5718e39a2254a87c55d2be68fd5
+  revision: f18b1997237f7dda7d9c12a38ac3d84a81469a17
   branch: users_autoblock_030_translations
   specs:
     decidim-decidim_awesome (0.13.2)
