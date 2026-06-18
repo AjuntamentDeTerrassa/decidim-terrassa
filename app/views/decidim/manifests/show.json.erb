@@ -2,7 +2,7 @@
   OVERRIDE of decidim-core's app/views/decidim/manifests/show.json.erb (copied from v0.30.9).
   Only change vs upstream: the four icon "src" values are wrapped in `raw`.
 
-  Reason: this is a JSON template rendered through ActionView, which auto-escapes `<%%= %%>`
+  Reason: this is a JSON template rendered through ActionView, which auto-escapes erb tags
   output. The favicon `variant_url` returns a signed Active Storage URL containing "&" in its
   query string, which gets escaped to "&amp;", producing an invalid manifest and broken PWA
   icons. `raw` emits the system-generated URL verbatim. Deface can't fix this (it only
